@@ -1,7 +1,9 @@
 import React from "react";
-import ProjectDetails from "./ProjectDetails";
 import ProjectImage1 from "../../assets/images/FitMax.png";
 import ProjectImage2 from "../../assets/images/news.png";
+import Project from "./Project/Project";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 
 const ProjectsInfo = [
   {
@@ -20,29 +22,72 @@ const ProjectsInfo = [
 
 const ProjectsBanner = () => {
   return (
-    <div className="flex my-6 pb-6 border-b-2 border-Border items-center justify-between h-82 ">
-      <ProjectDetails
-        name={ProjectsInfo[0].name}
-        description={ProjectsInfo[0].description}
-        image={ProjectsInfo[0].image}
-        newProject={true}
-      />
-      <div className="text-center font-black font-serif flex-none w-1/3 border-x-2 border-Border px-16 pt-6 mx-6 h-full">
-        <h1 className="text-6xl mb-8">Recent Projects</h1>
-        <h2 className="text-2xl leading-relaxed my-8">
-          Here are some projects that I have worked on. Click on the project to
-          see.
-        </h2>
-        <h3 className="text-2xl my-8 text-Tertiary">
-          ← You can drag left and right →
-        </h3>
-      </div>
-      <ProjectDetails
-        name={ProjectsInfo[1].name}
-        description={ProjectsInfo[1].description}
-        image={ProjectsInfo[1].image}
-      />
-    </div>
+    <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+      simulateTouch={true}
+      initialSlide={1}
+      onSlideChange={() => console.log("slide change")}
+      onSwiper={(swiper) => console.log(swiper)}
+      breakpoints={{
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        1000: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1400: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+      }}
+      className="my-6 border-b-2 border-Border items-center justify-between h-full cursor-grab active:cursor-grabbing"
+    >
+      <SwiperSlide>
+        <Project
+          name={ProjectsInfo[1].name}
+          description={ProjectsInfo[1].description}
+          image={ProjectsInfo[1].image}
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Project
+          name={ProjectsInfo[0].name}
+          description={ProjectsInfo[0].description}
+          image={ProjectsInfo[0].image}
+          newProject={true}
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="flex flex-col items-center text-center font-black font-serif flex-none border-x-2 border-Border px-16 h-full">
+          <h1 className="text-6xl mb-8">Recent Projects</h1>
+          <h2 className="text-2xl leading-relaxed my-8">
+            Here are some projects that I have worked on. Click on the project
+            to see.
+          </h2>
+          <h3 className="text-2xl my-8 text-Tertiary">
+            ← You can drag left and right →
+          </h3>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Project
+          name={ProjectsInfo[1].name}
+          description={ProjectsInfo[1].description}
+          image={ProjectsInfo[1].image}
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Project
+          name={ProjectsInfo[0].name}
+          description={ProjectsInfo[0].description}
+          image={ProjectsInfo[0].image}
+          newProject={true}
+        />
+      </SwiperSlide>
+    </Swiper>
   );
 };
 
@@ -50,20 +95,6 @@ export default ProjectsBanner;
 
 /*
 
-  1) make a project component
-  2) make a center all projects component
-  3) Start with 3 items and then figure out how to drag it to the left and right (greensock)
-
-overflow-x-scroll whitespace-nowrap
-w-1/3
-
-
-<div className="text-center font-black font-serif flex-none w-1/3 border-x-2 border-Border px-16 pt-6 mx-4 h-full">
-        <h1 className="text-6xl mb-8">All Projects</h1>
-        <h2 className="text-2xl leading-relaxed my-8">
-          A selection of some of my favorite projects that I have worked on
-        </h2>
-        <h3 className="text-2xl my-8">← You can drag left and right →</h3>
-      </div>
+  
 
 */

@@ -8,15 +8,12 @@ module.exports = {
     screens: {
       xs: "480px",
       sm: "600px",
-      md: "728px",
+      md: "760px",
       lg: "984px",
       xl: "1740px",
       "2xl": "1860px",
     },
-    // fontSize: {
-    //   "fluid-1": "clamp(1.89rem, calc(1.48rem + 2.03vw), 2.93rem)",
-    //   "fluid-2": "clamp(3.27rem, calc(2.31rem + 4.79vw), 5.72rem)",
-    // },
+
     fontSize: {
       sm: ["0.8rem", "1"],
       base: ["1rem", "1"],
@@ -59,10 +56,7 @@ module.exports = {
         "calc(2.441rem + (3.052 - 2.441) * ((100vw - 400px) / (1600 - 400)))",
         1,
       ],
-      "fluid-5xl": [
-        "calc(3.052rem + (3.815 - 3.052) * ((100vw - 400px) / (1600 - 400)))",
-        1,
-      ],
+      "fluid-5xl": ["clamp(1.5rem, calc(-0.75rem + 10.00vw), 3.00rem)", 1],
       "fluid-6xl": [
         "calc(3.815rem + (4.768 - 3.815) * ((100vw - 400px) / (1600 - 400)))",
         1,
@@ -77,22 +71,7 @@ module.exports = {
       ],
       "fluid-9xl": ["clamp(1.5rem, calc(-0.10rem + 6.75vw), 8.00rem)", "1"],
     },
-    // fontSize: {
-    //   sm: ["0.8rem", "1.25rem"],
-    //   base: ["1rem", "1.25rem"],
-    //   xl: ["1.25rem", "1.25rem"],
-    //   "2xl": ["1.563rem", "1.25rem"],
-    //   "3xl": ["1.953rem", "1.25rem"],
-    //   "4xl": ["2.441rem", "1.25rem"],
-    //   "5xl": ["3.052rem", "1.25rem"],
-    //   "6xl": ["3.815rem", "1.25rem"],
-    //   "7xl": ["4.768rem", "1.25rem"],
-    //   "8xl": ["5.96rem", "1.25rem"],
-    //   "9xl": ["128px", "1.25rem"],
-    // },
-    // container: {
-    //   padding: "1rem",
-    // },
+
     extend: {
       colors: {
         // Primary: "#cdc6be",
@@ -101,6 +80,7 @@ module.exports = {
         Secondary: "rgba(26, 28, 26, 0.9)",
         Tertiary: "rgba(199, 57, 43, 0.8)",
         Border: "rgba(26, 28, 26, 0.9)",
+        Black: "#1d1d1b",
       },
     },
   },

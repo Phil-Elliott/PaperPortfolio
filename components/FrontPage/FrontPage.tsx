@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import FrontPageImage from "../../assets/images/FrontPageImage.png";
 
 const FrontPage = () => {
   return (
@@ -18,8 +20,13 @@ const FrontPage = () => {
           experience or abilities.
         </p>
       </div>
-      <div className="pl-16">
-        <div className="pl-16 bg-Secondary h-full"></div>
+      <div className="relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md ml-16">
+        <Image
+          src={FrontPageImage}
+          alt="FrontPageImage"
+          fill
+          style={{ objectFit: "cover" }}
+        />
       </div>
     </div>
   );
@@ -31,4 +38,7 @@ export default FrontPage;
   Can make a headline component
   Can also make a component for the first letter of the text so that it can be styled differently on left
 
+
+   Cartoonize your image here (you in front of a computer)
+     https://www.befunky.com/create/photo-to-cartoon/
 */

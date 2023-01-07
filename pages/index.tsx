@@ -5,14 +5,14 @@ import AboutMe from "../components/AboutMe/AboutMe";
 
 export default function Home() {
   return (
-    <div className="bg-Primary text-Secondary p-2 overflow-hidden">
-      <div className="border-2 border-Secondary py-4 px-4 xl:px-12 min-h-screen min-w-screen">
+    <div className="bg-Primary text-Secondary sm:p-2 overflow-hidden">
+      <div className="sm:border-2 border-Secondary py-4 px-4 xl:px-12 min-h-screen min-w-screen">
         <Header />
-        {/* <ProjectsBanner />
+        <ProjectsBanner />
         <FrontPage />
         <div className="pb-20">
           <AboutMe />
-        </div> */}
+        </div>
       </div>
     </div>
   );
