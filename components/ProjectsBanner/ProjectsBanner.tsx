@@ -32,15 +32,15 @@ const ProjectsBanner = () => {
       breakpoints={{
         300: {
           slidesPerView: 1,
-          spaceBetween: 20,
+          initialSlide: 2,
         },
-        1000: {
+        984: {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 30,
+          initialSlide: 2,
         },
         1400: {
           slidesPerView: 3,
-          spaceBetween: 40,
         },
       }}
       className="my-6 border-b-2 border-Border items-center justify-between h-full cursor-grab active:cursor-grabbing"
@@ -61,7 +61,7 @@ const ProjectsBanner = () => {
         />
       </SwiperSlide>
       <SwiperSlide>
-        <div className="flex flex-col items-center text-center font-black font-serif flex-none border-x-2 border-Border px-16 h-full">
+        <div className="flex flex-col items-center text-center font-black font-serif lg:border-x-2 border-Border px-8 h-full">
           <h1 className="text-6xl mb-8">Recent Projects</h1>
           <h2 className="text-2xl leading-relaxed my-8">
             Here are some projects that I have worked on. Click on the project

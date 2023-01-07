@@ -10,6 +10,7 @@ module.exports = {
       sm: "600px",
       md: "760px",
       lg: "984px",
+      lg2: "1100px",
       xl: "1740px",
       "2xl": "1860px",
     },
@@ -57,10 +58,7 @@ module.exports = {
         1,
       ],
       "fluid-5xl": ["clamp(1.5rem, calc(-0.75rem + 10.00vw), 3.00rem)", 1],
-      "fluid-6xl": [
-        "calc(3.815rem + (4.768 - 3.815) * ((100vw - 400px) / (1600 - 400)))",
-        1,
-      ],
+      "fluid-6xl": ["clamp(1.75rem, calc(-0.75rem + 10.00vw), 3.00rem)", 1],
       "fluid-7xl": [
         "calc(4.768rem + (5.96 - 4.768) * ((100vw - 400px) / (1600 - 400)))",
         1,
@@ -69,7 +67,7 @@ module.exports = {
         "calc(5.96rem + (8 - 5.96) * ((100vw - 400px) / (1600 - 400)))",
         1,
       ],
-      "fluid-9xl": ["clamp(1.5rem, calc(-0.10rem + 6.75vw), 8.00rem)", "1"],
+      "fluid-9xl": ["clamp(2rem, calc(-0.10rem + 6.75vw), 8.00rem)", "1"],
     },
 
     extend: {

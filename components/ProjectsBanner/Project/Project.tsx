@@ -11,7 +11,7 @@ type ProjectProps = {
 
 const Project = ({ name, description, image, newProject }: ProjectProps) => {
   return (
-    <div className="">
+    <div className="pb-4">
       <div className="relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md h-52">
         <Image src={image.src} alt={name} fill style={{ objectFit: "cover" }} />
       </div>

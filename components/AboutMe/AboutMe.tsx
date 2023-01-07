@@ -10,32 +10,29 @@ const AboutMe = () => {
 
   const Articles = [
     {
+      title: "Teacher",
+      description:
+        "Having gained valuable skills in communication and problem-solving as an English as a Second Language (ESL) teacher, I have honed my ability to think critically and adapt to different learning styles through my experience in developing and implementing lesson plans and providing individualized instruction. In addition, evaluating student progress has taught me the importance of setting goals and tracking progress towards them.",
+    },
+    {
       title: "Interests",
       description:
         "In my spare time, I enjoy exploring new places and immersing myself in different cultures through travel. I also find that getting out into nature and hiking helps me clear my mind and find inspiration. These activities help me stay energized and motivated in my pursuit of web development. I am also an avid reader, constantly seeking new knowledge and learning opportunities. Reading helps me relax and escape from the daily stresses of life, and also expands my understanding of the world around me.",
     },
     {
-      title: "Teacher",
-      description:
-        "As an English as a Second Language (ESL) teacher, I have gained valuable skills in communication and problem-solving. My experience in developing and implementing lesson plans and providing individualized instruction has helped me to hone my ability to think critically and adapt to different learning styles. In addition, evaluating student progress has taught me the importance of setting goals and tracking progress towards them.",
-    },
-    {
       title: "Education",
       description:
-        "I received my bachelor's degree in Business Administration from Towson University in 2016, with a focus on project management. During my studies, I gained a strong foundation in business principles and developed valuable skills in leadership, communication, and problem-solving. These skills have helped me as a teacher and will surely benefit me in my future career as a web developer.",
+        "Receiving my bachelor's degree in Business Administration from Towson University in 2016, I gained a strong foundation in business principles and developed valuable skills in leadership, communication, and problem-solving. My focus during my studies was on project management. These skills have already helped me as a teacher and will surely benefit me in my future career as a web developer.",
     },
     {
-      title: "About Me",
+      title: "Programming",
       description:
-        "Hello! My name is Phil and I am excited to embark on a new journey as a web developer. I have a passion for programming and a desire to create dynamic, user-friendly websites and applications. I have been diligently working to acquire the skills and knowledge necessary to excel in this field, and I am eager to put my skills to the test in a professional setting. As I continue to grow and learn, I am confident that my passion for web development will translate into a fulfilling and successful career.",
+        "Ever since I discovered my passion for programming, I have been excited to embark on a new journey as a web developer. With a desire to create dynamic, user-friendly websites and applications, I have been diligently working to acquire the skills and knowledge necessary to excel in this field. I am eager to put my skills to the test in a professional setting and as I continue to grow and learn, I am confident that my passion for web development will translate into a fulfilling and successful career.",
     },
   ];
 
   return (
-    <div
-      className="flex my-6 relative justify-center w-full h-96
-    "
-    >
+    <div className="my-6 relative lg2:flex justify-center lg2:w-[225%] h-full">
       {Articles.map((article, index) => (
         <Article
           key={article.title}

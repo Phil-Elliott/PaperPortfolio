@@ -10,9 +10,9 @@ export default function Home() {
         <Header />
         <ProjectsBanner />
         <FrontPage />
-        <div className="pb-20">
-          <AboutMe />
-        </div>
+        {/* <div className="pb-20"> */}
+        <AboutMe />
+        {/* </div> */}
       </div>
     </div>
   );
