@@ -2,6 +2,7 @@ import Header from "../components/Header/Header";
 import FrontPage from "../components/FrontPage/FrontPage";
 import ProjectsBanner from "../components/ProjectsBanner/ProjectsBanner";
 import AboutMe from "../components/AboutMe/AboutMe";
+import Skills from "../components/Skills/Skills";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         {/* <div className="pb-20"> */}
         <AboutMe />
         {/* </div> */}
+        <Skills />
       </div>
     </div>
   );
