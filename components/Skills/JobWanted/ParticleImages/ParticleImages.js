@@ -10,8 +10,6 @@ import nextjs from "../../../../assets/svgs/nextjs.svg";
 import redux from "../../../../assets/svgs/redux.svg";
 import sass from "../../../../assets/svgs/sass.svg";
 
-import Image from "next/image";
-
 const ParticleImages = () => {
   const particlesInit = useCallback(async (engine) => {
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -25,108 +23,7 @@ const ParticleImages = () => {
   }, []);
 
   return (
-    <div className="h-full">
-      {/* <Particles
-        className="h-full"
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={{
-          fullScreen: { enable: false },
-          height: "100%",
-          background: {
-            color: {
-              value: "#0d47a1",
-            },
-          },
-          fpsLimit: 120,
-          interactivity: {
-            events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-            },
-          },
-          particles: {
-            color: {
-              value: "#ffffff",
-            },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
-            collisions: {
-              enable: true,
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outModes: {
-                default: "bounce",
-              },
-              random: false,
-              speed: 6,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                area: 800,
-              },
-              value: 80,
-            },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 1, max: 5 },
-            },
-          },
-          particles: {
-            // other properties
-            shape: {
-              type: "image",
-              image: [
-                {
-                  src: "path/to/image1.png",
-                  width: 100,
-                  height: 100
-                },
-                {
-                  src: "path/to/image2.png",
-                  width: 50,
-                  height: 50
-                }
-              ],
-            },
-            // other properties
-          }
-
-          detectRetina: true,
-        }}
-      /> */}
-      {/* <Image src={FrontPageImage} alt="image" /> */}
+    <div className="h-full absolute">
       <Particles
         className="h-full"
         id="tsparticles"
@@ -135,11 +32,11 @@ const ParticleImages = () => {
         options={{
           fullScreen: { enable: false },
           height: "100%",
-          background: {
-            color: {
-              // value: "rgba(26, 28, 26, 0.9)",
-            },
-          },
+          // background: {
+          //   color: {
+          //     value: "#adadad",
+          //   },
+          // },
           fpsLimit: 120,
           interactivity: {
             events: {
@@ -149,7 +46,7 @@ const ParticleImages = () => {
               },
               onHover: {
                 enable: true,
-                mode: "repulse",
+                mode: "attract",
               },
               resize: true,
             },
@@ -158,14 +55,14 @@ const ParticleImages = () => {
                 quantity: 4,
               },
               repulse: {
-                distance: 200,
+                distance: 100,
                 duration: 0.4,
               },
             },
           },
           particles: {
             color: {
-              value: "efefef",
+              value: "#ffffff",
             },
             collisions: {
               enable: true,
@@ -183,7 +80,7 @@ const ParticleImages = () => {
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 400,
               },
               value: 100,
             },
