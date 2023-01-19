@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ParticleImages from "../JobWanted/ParticleImages/ParticleImages";
+import ParticleImages from "./ParticleImages/ParticleImages";
 
 type AttemptObject = {
   row: number;
@@ -249,7 +249,7 @@ const CrosswordPuzzle = () => {
   // }, [currentWord]);
 
   return (
-    <div className="h-full">
+    <div className="h-full px-6">
       <h1 className="text-center text-6xl text-Secondary font-bold font-serif pb-4 tracking-widest px-8">
         Daily Crossword
       </h1>

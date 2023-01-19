@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Skills/JobWanted/ParticleImages/ParticleImages.js"
+    "components/Skills/Crossword/ParticleImages/ParticleImages.js"
   ],
   "exclude": ["node_modules"]
 }
