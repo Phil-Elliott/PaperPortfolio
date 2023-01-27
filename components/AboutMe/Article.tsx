@@ -83,10 +83,10 @@ const Article = ({
         }}
         className="h-full px-6 pb-4 border-Secondary outline-dotted rounded"
       >
-        <h1 className="article-header text-Tertiary text-3xl sm:text-6xl">
+        <h1 className="article-header text-Tertiary text-3xl sm:text-5xl pt-4">
           {title}
         </h1>
-        <p className="article-text first-letter:text-fluid-5xl lg2:first-letter:text-6xl leading-relaxed lg2:leading-loose">
+        <p className="article-text  leading-relaxed lg2:leading-loose">
           {description}
         </p>
       </div>
@@ -95,3 +95,5 @@ const Article = ({
 };
 
 export default Article;
+
+// first-letter:text-fluid-5xl

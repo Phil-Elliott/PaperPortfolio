@@ -6,7 +6,7 @@ type ButtonProps = {
 
 const Button = ({ children }: ButtonProps) => {
   return (
-    <button className="bg-Tertiary text-Primary rounded-sm py-3 px-5 font-medium text-lg">
+    <button className="bg-Tertiary text-Primary rounded-sm py-2 px-3 font-bold text-md">
       {children}
     </button>
   );

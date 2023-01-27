@@ -125,7 +125,7 @@ const CrosswordPuzzle = () => {
         <input
           key={j}
           id={`cell-${i}-${j}`}
-          className="bg-Primary border-2 border-Secondary text-center uppercase font-medium text-xl p-2 z-10"
+          className="bg-Primary border-2 border-Secondary text-center uppercase p-1 font-bold text-md z-10"
           data-row={i}
           data-col={j}
           maxLength={1}
@@ -249,17 +249,12 @@ const CrosswordPuzzle = () => {
   // }, [currentWord]);
 
   return (
-    <div className="h-full px-6">
-      <h1 className="text-center text-6xl text-Secondary font-bold font-serif pb-4 tracking-widest px-8">
-        Daily Crossword
-      </h1>
-      <div className="relative">
-        <ParticleImages />
-
-        <div className="bg-Secondary grid grid-cols-10 grid-rolls-10 z-10">
-          {cells}
-        </div>
+    <div className="h-full pl-6 col-span-2">
+      <h1 className="article-header text-center">Daily Crossword</h1>
+      <div className="bg-Secondary grid grid-cols-10 grid-rolls-10 z-9">
+        {cells}
       </div>
+
       <div className="py-4">
         <p className="text-Secondary text-2xl font-bold font-serif">
           {currentWord.clue}
@@ -272,6 +267,16 @@ const CrosswordPuzzle = () => {
 export default CrosswordPuzzle;
 
 /*
+  1) Loose the particles 
+  2) Remove the skills 
+  3) Have a hint button 
+  4) Have an autofill button
+  5) Have a reset button
+  6) Maybe cache where they are with it
+
+
+
+
 
 Put particles in black background and have them bouncing around but make sure the white is above it somehow
 

@@ -5,6 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+      serif: ["Spectral", "serif"],
+      mono: ["Menlo", "monospace"],
+    },
+
     screens: {
       xs: "480px",
       sm: "600px",

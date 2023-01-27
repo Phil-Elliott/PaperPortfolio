@@ -4,8 +4,8 @@ import FrontPageImage from "../../assets/images/FrontPageImage.png";
 
 const FrontPage = () => {
   return (
-    <div className="flex gap-x-16 grid-cols-2">
-      <div className="border-r-2 border-Border w-3/5 pr-16">
+    <div className="py-6 border-y-2 border-Secondary gap-x-8 grid grid-cols-5">
+      <div className="border-r-2 border-Border pr-8 col-span-3">
         <h1 className="article-header">
           Aspiring Frontend Developer Seeking First Dev Role
         </h1>
@@ -20,12 +20,12 @@ const FrontPage = () => {
           experience or abilities.
         </p>
       </div>
-      <div className="relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md w-2/5">
+      <div className="relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md col-span-2">
         <Image
           src={FrontPageImage}
           alt="FrontPageImage"
           fill
-          style={{ objectFit: "cover" }}
+          className="object-cover object-bottom"
         />
       </div>
     </div>
