@@ -27,8 +27,8 @@ const ProjectsBanner = () => {
       slidesPerView={3}
       simulateTouch={true}
       initialSlide={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
+      // onSwiper={(swiper) => console.log(swiper)}
       breakpoints={{
         300: {
           slidesPerView: 1,

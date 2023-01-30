@@ -15,6 +15,18 @@ type DataObject = {
   num: number;
 };
 
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Redux",
+  "SCSS",
+  "Tailwind",
+  "PostgreSQL",
+];
+
 const CrosswordPuzzle = () => {
   const [attempt, setAttempt] = useState<AttemptObject[]>([]);
   const [newAttempt, setNewAttempt] = useState<AttemptObject>();
@@ -37,14 +49,14 @@ const CrosswordPuzzle = () => {
       },
       {
         clue: "What do you call the building blocks of a website?",
-        answer: "HTML",
+        answer: "Html",
         row: 5,
         col: 0,
         num: 6,
       },
       {
         clue: "A CSS preprocessor that helps you dress up a website",
-        answer: "SASS",
+        answer: "Sass",
         row: 5,
         col: 5,
         num: 7,
@@ -82,22 +94,13 @@ const CrosswordPuzzle = () => {
       },
       {
         clue: "What's the language that gives a website a makeover?",
-        answer: "CSS",
+        answer: "Css",
         row: 3,
         col: 5,
         num: 5,
       },
     ],
   };
-
-  /*
-    1) Need to make sure question is showing when clicked and not after starting to type
-            - use the focus instead of change
-
-
-    Put the number inside of the 1st cell of a word
-
-  */
 
   // Creates the grid
   const rows = 10;
@@ -117,51 +120,6 @@ const CrosswordPuzzle = () => {
       grid[word.row + i][word.col] = word.answer[i];
     }
   }
-
-  // Creates the cells that are displayed
-  const cells = grid.map((row, i) =>
-    row.map((cell, j) =>
-      cell !== "" ? (
-        <input
-          key={j}
-          id={`cell-${i}-${j}`}
-          className="bg-Primary border-2 border-Secondary text-center uppercase p-1 font-bold text-md z-10"
-          data-row={i}
-          data-col={j}
-          maxLength={1}
-          value={
-            attempt.find((a) => a.row === i && a.col === j)?.attempt ===
-            cell.toUpperCase()
-              ? cell
-              : newAttempt?.row === i && newAttempt?.col === j
-              ? newAttempt?.attempt
-              : ""
-          }
-          defaultValue=""
-          readOnly={
-            attempt.find((a) => a.row === i && a.col === j)?.attempt ===
-            cell.toUpperCase()
-          }
-          onChange={(e) =>
-            attemptLetter(
-              e.target.value.toUpperCase(),
-              cell.toUpperCase(),
-              i,
-              j
-            )
-          }
-          onFocus={
-            attempt.find((a) => a.row === i && a.col === j)?.attempt ===
-            cell.toUpperCase()
-              ? () => nextCell(i, j)
-              : () => findWord(i, j)
-          }
-        />
-      ) : (
-        <div className="">{cell}</div>
-      )
-    )
-  );
 
   // Moves to the next cell
   function nextCell(row: number, col: number) {
@@ -238,27 +196,97 @@ const CrosswordPuzzle = () => {
   }
 
   /*
-      Get numbers in the box
-      Display the question on the bottom 
-      Jump over cells that are done 
+
+  if letter is capitalized have the number there
+
+  maybe just set all the jumbers accordinly
 
   */
 
-  // useEffect(() => {
-  //   console.log(currentWord);
-  // }, [currentWord]);
+  const cellValue = (i: number, j: number, cell: string) => {
+    if (
+      attempt.find((a) => a.row === i && a.col === j)?.attempt ===
+      cell.toUpperCase()
+    ) {
+      return cell;
+    } else if (newAttempt?.row === i && newAttempt?.col === j) {
+      return newAttempt?.attempt;
+    } else {
+      return "";
+    }
+  };
 
   return (
-    <div className="h-full pl-6 col-span-2">
-      <h1 className="article-header text-center">Daily Crossword</h1>
-      <div className="bg-Secondary grid grid-cols-10 grid-rolls-10 z-9">
-        {cells}
-      </div>
+    <div className="h-full px-6">
+      <h1 className="uppercase article-header bg-Secondary text-center text-Primary font-serif py-2 tracking-widest px-4 mb-6 rounded ">
+        Code Crossword
+      </h1>
+      <div className=" grid grid-cols-2">
+        <div>
+          {grid.map((row, i) => {
+            return (
+              <div
+                key={i}
+                className="bg-Secondary grid grid-cols-10 grid-rolls-10 z-9"
+              >
+                {row.map((cell, j) =>
+                  cell !== "" ? (
+                    <input
+                      key={j}
+                      id={`cell-${i}-${j}`}
+                      className="bg-Primary border-2 border-Secondary py-1 text-center uppercase font-black text-md z-10"
+                      data-row={i}
+                      data-col={j}
+                      maxLength={1}
+                      value={cellValue(i, j, cell)}
+                      readOnly={
+                        attempt.find((a) => a.row === i && a.col === j)
+                          ?.attempt === cell.toUpperCase()
+                      }
+                      onChange={(e) =>
+                        attemptLetter(
+                          e.target.value.toUpperCase(),
+                          cell.toUpperCase(),
+                          i,
+                          j
+                        )
+                      }
+                      onFocus={
+                        attempt.find((a) => a.row === i && a.col === j)
+                          ?.attempt === cell.toUpperCase()
+                          ? () => nextCell(i, j)
+                          : () => findWord(i, j)
+                      }
+                    />
+                  ) : (
+                    <div key={j}>{cell}</div>
+                  )
+                )}
+              </div>
+            );
+          })}
+        </div>
 
-      <div className="py-4">
-        <p className="text-Secondary text-2xl font-bold font-serif">
-          {currentWord.clue}
-        </p>
+        <div className="pl-6 pt-2 font-bold">
+          {/* <p className="text-xl text-Tertiary font-bold leading-loose">
+          Use the skills to solve the crossword puzzle.
+        </p> */}
+          <div className="text-xl pb-6 text-Tertiary">
+            <h3 className=" font-semibold mb-6 text-Secondary">
+              Skills Include:
+            </h3>
+            <ul className="list-disc list-inside flex flex-wrap gap-7 ">
+              {skills.map((skill) => (
+                <li className="" key={skill}>
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="text-Secondary text-xl font-serif leading-loose">
+            {currentWord.clue}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -267,51 +295,6 @@ const CrosswordPuzzle = () => {
 export default CrosswordPuzzle;
 
 /*
-  1) Loose the particles 
-  2) Remove the skills 
-  3) Have a hint button 
-  4) Have an autofill button
-  5) Have a reset button
-  6) Maybe cache where they are with it
-
-
-
-
-
-Put particles in black background and have them bouncing around but make sure the white is above it somehow
-
-
-
-
-Create an algorithm that will position the words
-Gives each item a row and a column
-
-Create a grid 
-  - 10 x 10
-  - bCan have your object created by the algorithm inserted into those blocks on the grid
-  - 
-
-
-
-
-
-Have a front and a back 
-How to make it flip?
-  Have a button that flips it
-
-- Front
-    - Crossword Puzzle
-- Back
-    - Questions
-      - Answers to questions
-      - Maybe black out and have it reveal the answer when you click on it
-
-
-- Functionality 
-      - can write in the blocks 
-      - when answer is correct the letters stay in the block
-      - when answer is incorrect the letters disapear
-
-      -
+  
 
 */

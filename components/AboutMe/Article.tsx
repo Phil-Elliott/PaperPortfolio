@@ -67,10 +67,6 @@ const Article = ({
     }
   }, [hovered]);
 
-  useEffect(() => {
-    console.log(translateX);
-  }, [translateX]);
-
   return (
     <div
       onMouseOver={() => handleHover(index)}
@@ -79,7 +75,7 @@ const Article = ({
     >
       <div
         style={{
-          paddingRight: index !== 3 ? `9%` : "",
+          paddingRight: index !== 3 ? `9%` : "0%",
         }}
         className="h-full px-6 pb-4 border-Secondary outline-dotted rounded"
       >

@@ -3,6 +3,7 @@ import FrontPage from "../components/FrontPage/FrontPage";
 import ProjectsBanner from "../components/ProjectsBanner/ProjectsBanner";
 import AboutMe from "../components/AboutMe/AboutMe";
 import Skills from "../components/Skills/Skills";
+import Projects from "../components/Projects/Projects";
 
 export default function Home() {
   return (
@@ -11,10 +12,9 @@ export default function Home() {
         <Header />
         <ProjectsBanner />
         <FrontPage />
-        {/* <div className="pb-20"> */}
         <AboutMe />
-        {/* </div> */}
         <Skills />
+        <Projects />
       </div>
     </div>
   );
