@@ -2,7 +2,7 @@ import React from "react";
 
 const JobWanted = () => {
   return (
-    <div className="leading-loose border-r-2 border-Secondary pr-6 col-span-2">
+    <div className="leading-loose lg3:border-r-2 border-Secondary lg3:pr-6 col-span-2 pb-6 lg3:pb-0">
       <h1 className="article-header bg-Tertiary text-center  text-Primary font-serif py-2 tracking-widest px-4 rounded">
         JOB WANTED!
       </h1>

@@ -34,7 +34,7 @@ const ProjectsBanner = () => {
           slidesPerView: 1,
           initialSlide: 2,
         },
-        884: {
+        984: {
           slidesPerView: 2,
           spaceBetween: 30,
           initialSlide: 2,
@@ -43,7 +43,7 @@ const ProjectsBanner = () => {
           slidesPerView: 3,
         },
       }}
-      className="my-6 border-Border items-center justify-between h-60 cursor-grab active:cursor-grabbing"
+      className="my-6 border-Border items-center justify-between h-60 cursor-grab active:cursor-grabbing select-none"
     >
       <SwiperSlide>
         <Project
@@ -61,7 +61,7 @@ const ProjectsBanner = () => {
         />
       </SwiperSlide>
       <SwiperSlide className="py-4 flex flex-col items-center justify-between text-center font-bold font-serif lg:border-x-2 border-Border xs:px-8 h-full">
-        <h1 className="text-3xl xs:text-4xl ">Recent Projects</h1>
+        <h1 className="text-fluid-9xl sm:text-4xl">Recent Projects</h1>
         <h2 className="leading-relaxed xs:leading-relaxed text-lg xs:text-xl ">
           Here are some projects that I have worked on. Click on the project to
           see.

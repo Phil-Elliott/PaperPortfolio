@@ -217,11 +217,11 @@ const CrosswordPuzzle = () => {
   };
 
   return (
-    <div className="h-full px-6">
+    <div className="h-full lg3:px-6">
       <h1 className="uppercase article-header bg-Secondary text-center text-Primary font-serif py-2 tracking-widest px-4 mb-6 rounded ">
         Code Crossword
       </h1>
-      <div className=" grid grid-cols-2">
+      <div className=" md:grid grid-cols-2">
         <div>
           {grid.map((row, i) => {
             return (
@@ -267,12 +267,9 @@ const CrosswordPuzzle = () => {
           })}
         </div>
 
-        <div className="pl-6 pt-2 font-bold">
-          {/* <p className="text-xl text-Tertiary font-bold leading-loose">
-          Use the skills to solve the crossword puzzle.
-        </p> */}
+        <div className="md:pl-6 pt-2 font-bold">
           <div className="text-xl pb-6 text-Tertiary">
-            <h3 className=" font-semibold mb-6 text-Secondary">
+            <h3 className="mt-6 md:mt-0 font-semibold mb-6 text-Secondary">
               Skills Include:
             </h3>
             <ul className="list-disc list-inside flex flex-wrap gap-7 ">

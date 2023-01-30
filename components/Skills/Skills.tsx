@@ -5,7 +5,7 @@ import JobWanted from "./JobWanted/JobWanted";
 
 const Skills = () => {
   return (
-    <div className="grid grid-cols-5 border-t-2 border-Secondary py-6">
+    <div className="lg3:grid grid-cols-5 border-t-2 border-Secondary py-6">
       <JobWanted />
       <div className="grid grid-cols-1 col-span-3">
         {/* <Instructions /> */}

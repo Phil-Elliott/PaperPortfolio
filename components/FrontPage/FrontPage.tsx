@@ -4,23 +4,23 @@ import FrontPageImage from "../../assets/images/FrontPageImage.png";
 
 const FrontPage = () => {
   return (
-    <div className="py-6 border-y-2 border-Secondary gap-x-8 grid grid-cols-5">
-      <div className="border-r-2 border-Border pr-8 col-span-3">
-        <h1 className="article-header">
+    <div className="py-6 border-y-2 border-Secondary gap-x-8 grid lg:grid-cols-5">
+      <div className="lg:border-r-2 border-Border lg:pr-8 col-span-3">
+        <h1 className="article-header lg:text-5xl text-fluid-9xl leading-normal lg:leading-normal">
           Aspiring Frontend Developer Seeking First Dev Role
         </h1>
-        <p className="article-text text-justify">
+        <p className="article-text lg:text-justify">
           Hello! I am a frontend developer with a strong foundation in HTML,
           CSS, and JavaScript. I am passionate about creating user-friendly and
           visually appealing websites, and I am always looking to improve my
           skills and stay up-to-date with the latest technologies. I am eager to
           put my skills to work and contribute to a dev team as a frontend
           developer. Please take a look at my portfolio to see some of my work,
-          and dont hesitate to get in touch if you have any questions about my
+          and don't hesitate to get in touch if you have any questions about my
           experience or abilities.
         </p>
       </div>
-      <div className="relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md col-span-2">
+      <div className="hidden lg:inline relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md col-span-2">
         <Image
           src={FrontPageImage}
           alt="FrontPageImage"
