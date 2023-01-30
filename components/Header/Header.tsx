@@ -35,7 +35,7 @@ const Header = () => {
         <h2>Front Page</h2>
         <h2>Editorial</h2>
         <h2>Tech Beat</h2>
-        <h2>Feature Stories</h2>
+        <h2>Featured Projects</h2>
         <h2>Letters to the Editor</h2>
       </div>
       <div className="bg-Tertiary text-Primary pb-1 sm:pb-0 pt-2 lg:mt-6 rounded-sm px-3">

@@ -12,7 +12,7 @@ type ProjectProps = {
 const Project = ({ name, description, image, newProject }: ProjectProps) => {
   return (
     <div className="h-full">
-      <div className="relative grayscale mix-blend-multiply rounded h-3/5">
+      <div className="relative grayscale mix-blend-multiply rounded h-2/4">
         <Image
           src={image.src}
           alt={name}
@@ -22,14 +22,18 @@ const Project = ({ name, description, image, newProject }: ProjectProps) => {
       </div>
       <div>
         <div className="flex items-center">
-          <h1 className="text-2xl font-black font-serif my-4">{name}</h1>
+          <h1 className="text-xl xs:text-2xl font-black font-serif my-4">
+            {name}
+          </h1>
           {newProject && (
-            <div className="text-md bg-Tertiary text-Primary font-bold text-center rounded ml-4 px-2">
-              New
+            <div className="bg-Tertiary font-bold text-center rounded ml-4 py-1 px-2">
+              <p className="text-sm xs:text-base text-Primary">New</p>
             </div>
           )}
         </div>
-        <p className="text-xl font-serif leading-relaxed ">{description}</p>
+        <p className="text-lg xs:text-xl font-serif leading-relaxed xs:leading-relaxed">
+          {description}
+        </p>
       </div>
     </div>
   );

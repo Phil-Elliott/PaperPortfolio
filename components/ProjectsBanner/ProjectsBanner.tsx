@@ -34,7 +34,7 @@ const ProjectsBanner = () => {
           slidesPerView: 1,
           initialSlide: 2,
         },
-        984: {
+        884: {
           slidesPerView: 2,
           spaceBetween: 30,
           initialSlide: 2,
@@ -43,7 +43,7 @@ const ProjectsBanner = () => {
           slidesPerView: 3,
         },
       }}
-      className="my-6 border-Border items-center justify-between h-72 cursor-grab active:cursor-grabbing"
+      className="my-6 border-Border items-center justify-between h-60 cursor-grab active:cursor-grabbing"
     >
       <SwiperSlide>
         <Project
@@ -60,13 +60,13 @@ const ProjectsBanner = () => {
           newProject={true}
         />
       </SwiperSlide>
-      <SwiperSlide className="py-4 flex flex-col items-center justify-between text-center font-bold font-serif lg:border-x-2 border-Border px-8 h-full">
-        <h1 className="text-4xl ">Recent Projects</h1>
-        <h2 className="text-xl leading-relaxed">
+      <SwiperSlide className="py-4 flex flex-col items-center justify-between text-center font-bold font-serif lg:border-x-2 border-Border xs:px-8 h-full">
+        <h1 className="text-3xl xs:text-4xl ">Recent Projects</h1>
+        <h2 className="leading-relaxed xs:leading-relaxed text-lg xs:text-xl ">
           Here are some projects that I have worked on. Click on the project to
           see.
         </h2>
-        <h3 className="text-xl text-Tertiary">
+        <h3 className="text-lg xs:text-xl text-Tertiary">
           ← You can drag left and right →
         </h3>
       </SwiperSlide>
