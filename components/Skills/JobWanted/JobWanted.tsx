@@ -3,11 +3,11 @@ import React from "react";
 const JobWanted = () => {
   return (
     <div className="leading-loose lg3:border-r-2 border-Secondary lg3:pr-6 col-span-2 pb-6 lg3:pb-0">
-      <h1 className="article-header bg-Tertiary text-center  text-Primary font-serif py-2 tracking-widest px-4 rounded">
+      <h1 className="text-fluid-9xl xs:text-5xl article-header bg-Tertiary text-center  text-Primary font-serif py-4 tracking-widest px-4 rounded-sm">
         JOB WANTED!
       </h1>
       <div>
-        <h2 className="text-3xl font-bold text-center mt-6">
+        <h2 className="text-fluid-5xl xs:text-3xl font-bold text-center mt-6 leading-relaxed">
           WEB DEVELOPER POSITION
         </h2>
         <p className="mt-6 article-text">

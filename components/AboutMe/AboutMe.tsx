@@ -32,7 +32,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="my-6 relative lg2:flex justify-center lg2:w-[225%] h-full">
+    <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 lg2:gap-0 my-6 relative lg2:flex justify-center lg2:w-[225%] h-full">
       {Articles.map((article, index) => (
         <Article
           key={article.title}

@@ -218,7 +218,7 @@ const CrosswordPuzzle = () => {
 
   return (
     <div className="h-full lg3:px-6">
-      <h1 className="uppercase article-header bg-Secondary text-center text-Primary font-serif py-2 tracking-widest px-4 mb-6 rounded ">
+      <h1 className="leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header bg-Secondary text-center text-Primary font-serif py-2 tracking-widest px-4 mb-6 rounded-sm ">
         Code Crossword
       </h1>
       <div className=" md:grid grid-cols-2">
