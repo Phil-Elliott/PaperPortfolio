@@ -218,7 +218,7 @@ const CrosswordPuzzle = () => {
 
   return (
     <div className="h-full lg3:px-6">
-      <h1 className="leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header bg-Secondary text-center text-Primary font-serif py-2 tracking-widest px-4 mb-6 rounded-sm ">
+      <h1 className="leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header font-serif py-4 tracking-widest mb-6 ">
         Code Crossword
       </h1>
       <div className=" md:grid grid-cols-2">
@@ -269,7 +269,7 @@ const CrosswordPuzzle = () => {
 
         <div className="md:pl-6 pt-2 font-bold">
           <div className="text-xl pb-6 text-Tertiary">
-            <h3 className="mt-6 md:mt-0 font-semibold mb-6 text-Secondary">
+            <h3 className="mt-6 md:mt-0 mb-6 text-Secondary font-black">
               Skills Include:
             </h3>
             <ul className="list-disc list-inside flex flex-wrap gap-7 ">
@@ -292,6 +292,6 @@ const CrosswordPuzzle = () => {
 export default CrosswordPuzzle;
 
 /*
-  
+  leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header bg-Secondary text-center text-Primary font-serif py-4 tracking-widest px-4 mb-6 rounded-sm 
 
 */

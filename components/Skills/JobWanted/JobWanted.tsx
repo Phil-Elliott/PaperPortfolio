@@ -7,7 +7,7 @@ const JobWanted = () => {
         JOB WANTED!
       </h1>
       <div>
-        <h2 className="text-fluid-5xl xs:text-3xl font-bold text-center mt-6 leading-relaxed">
+        <h2 className="xs:leading-relaxed text-fluid-5xl xs:text-3xl font-bold text-center mt-6 leading-relaxed">
           WEB DEVELOPER POSITION
         </h2>
         <p className="mt-6 article-text">
