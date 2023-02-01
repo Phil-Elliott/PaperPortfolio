@@ -1,5 +1,7 @@
 import React from "react";
-import Button from "../../shared/Button/Button";
+import { MdLaunch } from "react-icons/md";
+import { FaGithubSquare } from "react-icons/fa";
+import Link from "next/link";
 
 type ProjectProps = {
   title: string[];
@@ -16,7 +18,7 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
           return (
             <h1
               key={index}
-              className="inline-flex text-fluid-9xl font-bold mb-4 p-2 bg-Secondary text-Primary rounded-sm mr-2"
+              className="inline-flex text-fluid-8xl font-bold mb-4 p-2 bg-Secondary text-Primary rounded-sm mr-2"
             >
               {word}
             </h1>
@@ -24,18 +26,36 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
         })}
       </div>
       <p className="article-text mt-6">{description}</p>
-      <ul className="flex flex-wrap mt-5">
-        {skills.map((skill, index) => {
-          return (
-            <li
-              key={index}
-              className="mr-4 text-lg bg-Tertiary text-Primary p-1 rounded-sm"
-            >
-              {skill}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="grid grid-cols-3 mt-10">
+        <ul className="flex flex-wrap gap-4 col-span-2 items-center">
+          {skills.map((skill, index) => {
+            return (
+              <li
+                key={index}
+                className=" text-lg bg-Tertiary text-Primary p-1 rounded-sm"
+              >
+                {skill}
+              </li>
+            );
+          })}
+        </ul>
+        <div className="flex ml-auto items-start gap-4 text-lg">
+          <Link
+            href={demo}
+            className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary"
+          >
+            <MdLaunch className="mr-2" />
+            Demo
+          </Link>
+          <Link
+            href={demo}
+            className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary"
+          >
+            <FaGithubSquare className="mr-2" />
+            Code
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

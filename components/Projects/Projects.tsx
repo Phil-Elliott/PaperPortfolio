@@ -18,7 +18,7 @@ const projectData = [
       "PostgreSQL",
     ],
     demo: "https://www.google.com",
-    image: ProjectImage1,
+    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
   },
   {
     title: ["Personal", "Blog"],
@@ -26,7 +26,7 @@ const projectData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat.",
     skills: ["Next.Js", "TypeScript", "SCSS", "Sanity API"],
     demo: "https://www.google.com",
-    image: ProjectImage2,
+    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
   },
   {
     title: ["Ecommerce", "Store"],
@@ -34,7 +34,7 @@ const projectData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat.",
     skills: ["React", "TypeScript", "Sass"],
     demo: "https://www.google.com",
-    image: ProjectImage1,
+    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
   },
   {
     title: ["Card", "Game"],
@@ -42,39 +42,44 @@ const projectData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat.",
     skills: ["React", "TypeScript", "Sass"],
     demo: "https://www.google.com",
-    image: ProjectImage2,
+    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
   },
 ];
 
 const Projects = () => {
   return (
-    <div className="border-t-2 border-Secondary py-6">
-      {projectData.map((project, index) => {
-        return index % 2 === 0 ? (
-          <div className="grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
-            <Project
-              key={index}
-              title={project.title}
-              description={project.description}
-              skills={project.skills}
-              demo={project.demo}
-            />
-            <ProjectImage image={project.image} index={index} />
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
-            <ProjectImage image={project.image} index={index} />
-            <Project
-              key={index}
-              title={project.title}
-              description={project.description}
-              skills={project.skills}
-              demo={project.demo}
-            />
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <h1 className="border-y-2 border-Secondary text-6xl text-center py-4 font-bold tracking-wide my-6">
+        Featured Projects
+      </h1>
+      <div className="py-6">
+        {projectData.map((project, index) => {
+          return index % 2 === 0 ? (
+            <div className="grid grid-cols-2 gap-6 mb-12 border-b-2 border-Secondary pb-12">
+              <Project
+                key={index}
+                title={project.title}
+                description={project.description}
+                skills={project.skills}
+                demo={project.demo}
+              />
+              <ProjectImage images={project.images} index={index} />
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-6 mb-12 border-b-2 border-Secondary pb-12">
+              <ProjectImage images={project.images} index={index} />
+              <Project
+                key={index}
+                title={project.title}
+                description={project.description}
+                skills={project.skills}
+                demo={project.demo}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

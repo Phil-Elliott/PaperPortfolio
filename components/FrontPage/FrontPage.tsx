@@ -4,7 +4,7 @@ import FrontPageImage from "../../assets/images/FrontPageImage.png";
 
 const FrontPage = () => {
   return (
-    <div className="py-6 border-y-2 border-Secondary gap-x-8 grid lg:grid-cols-5">
+    <div className="py-6 border-t-2 border-Secondary gap-x-8 grid lg:grid-cols-5">
       <div className="lg:border-r-2 border-Border lg:pr-8 col-span-3">
         <h1 className="article-header lg:text-5xl text-fluid-9xl leading-normal lg:leading-normal">
           Aspiring Frontend Developer Seeking First Dev Role

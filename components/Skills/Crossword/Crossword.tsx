@@ -219,7 +219,7 @@ const CrosswordPuzzle = () => {
   return (
     <div className="h-full lg3:px-6">
       <h1 className="leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header font-serif py-4 tracking-widest mb-6 ">
-        Code Crossword
+        Skills Crossword
       </h1>
       <div className=" md:grid grid-cols-2">
         <div>
