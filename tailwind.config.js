@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Inter", "sans-serif"],
+      sans: ["Spectral", "sans-serif"],
       serif: ["Spectral", "serif"],
       mono: ["Menlo", "monospace"],
     },
@@ -79,8 +79,7 @@ module.exports = {
 
     extend: {
       colors: {
-        // Primary: "#cdc6be",
-        // #efefef:
+        Background: "#181818",
         Primary: "#efefef",
         Secondary: "rgba(26, 28, 26, 0.9)",
         Tertiary: "rgba(199, 57, 43, 0.8)",

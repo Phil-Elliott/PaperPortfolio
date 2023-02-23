@@ -29,7 +29,6 @@ const Article = ({
     `translate-y-[-175%]`,
   ]);
 
-  // const x = "lg2:translate-x-";
   const y = "translate-y-";
 
   useEffect(() => {
@@ -75,17 +74,14 @@ const Article = ({
       className={`shadow-lg p-3 border-2 border-Secondary rounded-md left-0 z-${index} bg-Primary transition-all duration-500 ease-in-out w-full translate-x-0 ${translateX[index]}`}
     >
       <div
-        // style={{
-        //   paddingRight: index !== 3 ? `9%` : "0%",
-        // }}
-        className={`h-full px-6 pb-4 border-Secondary outline-dotted rounded ${
+        className={`h-full p-6 border-Secondary outline-dotted rounded ${
           index !== 3 && padding
         }`}
       >
-        <h1 className="article-header text-Tertiary text-3xl xs:text-fluid-5xl lg:text-5xl pt-4">
+        <h1 className="article-header text-Tertiary text-3xl xs:text-fluid-5xl lg:text-5xl">
           {title}
         </h1>
-        <p className="article-text text-lg lg:text-xl  leading-relaxed lg:leading-loose first-letter:text-2xl lg:first-letter:text-4xl">
+        <p className="article-text text-lg lg:text-2xl leading-relaxed lg:leading-[1.75] first-letter:text-2xl lg:first-letter:text-4xl">
           {description}
         </p>
       </div>

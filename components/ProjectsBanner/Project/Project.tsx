@@ -17,7 +17,7 @@ const Project = ({ name, description, image, newProject }: ProjectProps) => {
           src={image.src}
           alt={name}
           fill
-          className="object-cover object-left-top"
+          className="object-cover object-left-top border-2 border-Border rounded-sm shadow-sm"
         />
       </div>
       <div>

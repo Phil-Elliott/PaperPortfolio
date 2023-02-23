@@ -269,14 +269,12 @@ const CrosswordPuzzle = () => {
 
         <div className="md:pl-6 pt-2 font-bold">
           <div className="text-xl pb-6 text-Tertiary">
-            <h3 className="mt-6 md:mt-0 mb-6 text-Secondary font-black">
+            <h3 className="mt-6 md:mt-0 mb-6 text-Secondary">
               Skills Include:
             </h3>
             <ul className="list-disc list-inside flex flex-wrap gap-7 ">
               {skills.map((skill) => (
-                <li className="" key={skill}>
-                  {skill}
-                </li>
+                <li key={skill}>{skill}</li>
               ))}
             </ul>
           </div>
@@ -294,4 +292,8 @@ export default CrosswordPuzzle;
 /*
   leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header bg-Secondary text-center text-Primary font-serif py-4 tracking-widest px-4 mb-6 rounded-sm 
 
+
+
+
+  
 */

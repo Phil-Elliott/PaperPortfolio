@@ -15,7 +15,7 @@ const ProjectsInfo = [
   {
     name: "News App",
     description:
-      "This is the News project that I have worked on. It is amazing and I am so proud of it.",
+      "This is the News project that I have worked on. It is amazing",
     image: ProjectImage2,
   },
 ];
@@ -67,7 +67,7 @@ const ProjectsBanner = () => {
           see.
         </h2>
         <h3 className="text-lg xs:text-xl text-Tertiary">
-          ← You can drag left and right →
+          ← Drag me left and right →
         </h3>
       </SwiperSlide>
       <SwiperSlide>
@@ -94,5 +94,5 @@ export default ProjectsBanner;
 /*
 
   
-
+h-72 md:
 */

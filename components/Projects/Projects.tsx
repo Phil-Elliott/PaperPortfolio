@@ -48,14 +48,14 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <>
-      <h1 className="border-y-2 border-Secondary text-6xl text-center py-4 font-bold tracking-wide my-6">
+    <div id="projects">
+      <h1 className="border-y-2 border-Secondary text-6xl text-center py-4 font-bold tracking-wide">
         Featured Projects
       </h1>
-      <div className="py-6">
+      <div className="pt-6">
         {projectData.map((project, index) => {
           return index % 2 === 0 ? (
-            <div className="grid grid-cols-2 gap-6 mb-12 border-b-2 border-Secondary pb-12">
+            <div className="grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
               <Project
                 key={index}
                 title={project.title}
@@ -66,7 +66,7 @@ const Projects = () => {
               <ProjectImage images={project.images} index={index} />
             </div>
           ) : (
-            <div className="grid grid-cols-2 gap-6 mb-12 border-b-2 border-Secondary pb-12">
+            <div className="grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
               <ProjectImage images={project.images} index={index} />
               <Project
                 key={index}
@@ -79,7 +79,7 @@ const Projects = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

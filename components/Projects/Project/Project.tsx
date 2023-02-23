@@ -18,7 +18,7 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
           return (
             <h1
               key={index}
-              className="inline-flex text-fluid-8xl font-bold mb-4 p-2 bg-Secondary text-Primary rounded-sm mr-2"
+              className="uppercase inline-flex text-fluid-7xl font-bold mb-4 px-1 bg-Secondary text-Primary rounded-sm mr-2"
             >
               {word}
             </h1>
@@ -26,7 +26,7 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
         })}
       </div>
       <p className="article-text mt-6">{description}</p>
-      <div className="grid grid-cols-3 mt-10">
+      <div className="grid grid-cols-3 mt-10 font-semibold">
         <ul className="flex flex-wrap gap-4 col-span-2 items-center">
           {skills.map((skill, index) => {
             return (

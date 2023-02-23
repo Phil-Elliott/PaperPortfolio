@@ -4,20 +4,21 @@ import FrontPageImage from "../../assets/images/FrontPageImage.png";
 
 const FrontPage = () => {
   return (
-    <div className="py-6 border-t-2 border-Secondary gap-x-8 grid lg:grid-cols-5">
-      <div className="lg:border-r-2 border-Border lg:pr-8 col-span-3">
+    <div
+      className="pt-6 border-t-2 border-Secondary gap-x-8 grid lg:grid-cols-4"
+      id="front"
+    >
+      <div className="lg:border-r-2 border-Border lg:pr-8 col-span-2">
         <h1 className="article-header lg:text-5xl text-fluid-9xl leading-normal lg:leading-normal">
           Aspiring Frontend Developer Seeking First Dev Role
         </h1>
         <p className="article-text lg:text-justify">
-          Hello! I am a frontend developer with a strong foundation in HTML,
-          CSS, and JavaScript. I am passionate about creating user-friendly and
-          visually appealing websites, and I am always looking to improve my
-          skills and stay up-to-date with the latest technologies. I am eager to
-          put my skills to work and contribute to a dev team as a frontend
-          developer. Please take a look at my portfolio to see some of my work,
-          and don't hesitate to get in touch if you have any questions about my
-          experience or abilities.
+          Hello! I'm a frontend developer with expertise in HTML, CSS,
+          JavaScript, and React. I create visually appealing and user-friendly
+          websites and continuously strive to improve my skills with the latest
+          technologies. I'm eager to join a dev team as a frontend developer and
+          contribute to exciting projects. Check out my portfolio for examples
+          of my work, and feel free to contact me with any questions.
         </p>
       </div>
       <div className="hidden lg:inline relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md col-span-2">
@@ -44,7 +45,9 @@ export default FrontPage;
 */
 
 /*
-
+I am eager to
+          put my skills to work and contribute to a dev team as a frontend
+          developer. 
 
 import React, { useEffect, useState } from "react";
 
@@ -120,6 +123,19 @@ const Article = ({
 };
 
 export default Article;
+
+
+
+{/* <p className="article-text lg:text-justify">
+          Hello! I am a frontend developer with a strong foundation in HTML,
+          CSS, JavaScript, and React. I am passionate about creating
+          user-friendly and visually appealing websites, and I am always looking
+          to improve my skills and stay up-to-date with the latest
+          technologies.I am eager to put my skills to work and contribute to a
+          dev team as a frontend developer. Please take a look at my portfolio
+          to see some of my work, and don't hesitate to get in touch if you have
+          any questions about my experience or abilities.
+        </p> 
 
 
 */

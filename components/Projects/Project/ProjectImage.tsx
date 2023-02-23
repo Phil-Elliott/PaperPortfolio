@@ -14,7 +14,7 @@ const ProjectImage = ({ images, index }: ProjectImageProps) => {
 
   return (
     <div className={` border-Secondary  ${border}`}>
-      <div className="relative grid grid-cols-2 gap-5 py-6 h-full">
+      <div className="relative grid grid-cols-2 gap-5 h-full">
         {images.map((image, index) => {
           return (
             <div className="relative">
@@ -23,7 +23,7 @@ const ProjectImage = ({ images, index }: ProjectImageProps) => {
                 alt="project image"
                 src={image.src}
                 fill
-                className="object-cover object-left-top grayscale  rounded-sm shadow-sm"
+                className="object-cover object-left-top grayscale  border-2 border-Border rounded-sm shadow-sm"
               />
             </div>
           );
