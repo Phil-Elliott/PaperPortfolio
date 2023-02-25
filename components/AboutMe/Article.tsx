@@ -66,22 +66,22 @@ const Article = ({
       setTranslateY([`${y}0`, `${y}[-50%]`, `${y}[-120%]`, `${y}[-175%]`]);
     }
   }, [hovered]);
-  const padding = "lg:pr-16";
+  const padding = "lg2:pr-16";
   return (
     <div
       onMouseOver={() => handleHover(index)}
       onMouseLeave={() => handleHover(3)}
-      className={`shadow-lg p-3 border-2 border-Secondary rounded-md left-0 z-${index} bg-Primary transition-all duration-500 ease-in-out w-full translate-x-0 ${translateX[index]}`}
+      className={`border-t-2 mb-6 pt-4 lg2:shadow-lg lg2:p-3 lg2:border-2 border-Secondary lg2:rounded-md left-0 z-${index} lg2:bg-Primary transition-all duration-500 ease-in-out w-full translate-x-0 ${translateX[index]}`}
     >
       <div
-        className={`h-full p-6 border-Secondary outline-dotted rounded ${
+        className={`h-full lg2:p-6 border-Secondary lg2:outline-dotted rounded ${
           index !== 3 && padding
         }`}
       >
         <h1 className="article-header text-Tertiary text-3xl xs:text-fluid-5xl lg:text-5xl">
           {title}
         </h1>
-        <p className="article-text text-lg lg:text-2xl leading-relaxed lg:leading-[1.75] first-letter:text-2xl lg:first-letter:text-4xl">
+        <p className="article-text lg2:text-2xl leading-[1.75] lg2:leading-[1.75]">
           {description}
         </p>
       </div>

@@ -36,7 +36,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 lg2:gap-0 my-6 relative lg2:flex justify-center lg2:w-[225%] h-full">
+    <div className="lg2:gap-0 mt-6 relative lg2:flex justify-center lg2:w-[225%] h-full">
       {Articles.map((article, index) => (
         <Article
           key={article.title}
@@ -54,6 +54,8 @@ const AboutMe = () => {
 export default AboutMe;
 
 /*
+
+grid lg:grid-cols-2 grid-cols-1 gap-5
 
 Left to Right
 1) Business

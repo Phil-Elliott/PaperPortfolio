@@ -108,16 +108,26 @@ const CrosswordPuzzle = () => {
   const grid = Array.from({ length: rows }, () =>
     Array.from({ length: cols }, () => "")
   );
+  const numbers = Array.from({ length: rows }, () =>
+    Array.from({ length: cols }, () => 0)
+  );
   const { across, down } = data;
+
   //insert the answers across and down into the grid
   for (let [key, word] of Object.entries(across)) {
     for (let i = 0; i < word.answer.length; i++) {
       grid[word.row][word.col + i] = word.answer[i];
+      if (i === 0) {
+        numbers[word.row][word.col] = word.num;
+      }
     }
   }
   for (let [key, word] of Object.entries(down)) {
     for (let i = 0; i < word.answer.length; i++) {
       grid[word.row + i][word.col] = word.answer[i];
+      if (i === 0) {
+        numbers[word.row][word.col] = word.num;
+      }
     }
   }
 
@@ -195,14 +205,6 @@ const CrosswordPuzzle = () => {
     return direction;
   }
 
-  /*
-
-  if letter is capitalized have the number there
-
-  maybe just set all the jumbers accordinly
-
-  */
-
   const cellValue = (i: number, j: number, cell: string) => {
     if (
       attempt.find((a) => a.row === i && a.col === j)?.attempt ===
@@ -217,8 +219,8 @@ const CrosswordPuzzle = () => {
   };
 
   return (
-    <div className="h-full lg3:px-6">
-      <h1 className="leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header font-serif py-4 tracking-widest mb-6 ">
+    <div className="h-full lg3:px-6 ">
+      <h1 className="text-fluid-9xl sm:text-5xl article-header uppercase md:tracking-widest leading-relaxed mb-2 py-4">
         Skills Crossword
       </h1>
       <div className=" md:grid grid-cols-2">
@@ -231,33 +233,42 @@ const CrosswordPuzzle = () => {
               >
                 {row.map((cell, j) =>
                   cell !== "" ? (
-                    <input
-                      key={j}
-                      id={`cell-${i}-${j}`}
-                      className="bg-Primary border-2 border-Secondary py-1 text-center uppercase font-black text-md z-10"
-                      data-row={i}
-                      data-col={j}
-                      maxLength={1}
-                      value={cellValue(i, j, cell)}
-                      readOnly={
-                        attempt.find((a) => a.row === i && a.col === j)
-                          ?.attempt === cell.toUpperCase()
-                      }
-                      onChange={(e) =>
-                        attemptLetter(
-                          e.target.value.toUpperCase(),
-                          cell.toUpperCase(),
-                          i,
-                          j
-                        )
-                      }
-                      onFocus={
-                        attempt.find((a) => a.row === i && a.col === j)
-                          ?.attempt === cell.toUpperCase()
-                          ? () => nextCell(i, j)
-                          : () => findWord(i, j)
-                      }
-                    />
+                    <div className="bg-Primary border-2 border-Secondary text-center uppercase font-black text-md z-5 relative">
+                      {numbers[i][j] !== 0 && (
+                        <span className="absolute text-Secondary text-sm p-1 font-black z-10">
+                          {numbers[i][j]}
+                        </span>
+                      )}
+                      <input
+                        key={j}
+                        id={`cell-${i}-${j}`}
+                        type="text"
+                        className="bg-Primary py-1 text-center uppercase font-black text-md z-8 w-full h-full"
+                        data-row={i}
+                        data-col={j}
+                        maxLength={1}
+                        value={cellValue(i, j, cell)}
+                        readOnly={
+                          attempt.find((a) => a.row === i && a.col === j)
+                            ?.attempt === cell.toUpperCase()
+                        }
+                        onChange={(e) =>
+                          attemptLetter(
+                            e.target.value.toUpperCase(),
+                            cell.toUpperCase(),
+                            i,
+                            j
+                          )
+                        }
+                        onClick={() => findWord(i, j)}
+                        onFocus={
+                          attempt.find((a) => a.row === i && a.col === j)
+                            ?.attempt === cell.toUpperCase()
+                            ? () => nextCell(i, j)
+                            : () => console.log()
+                        }
+                      />
+                    </div>
                   ) : (
                     <div key={j}>{cell}</div>
                   )
@@ -267,8 +278,13 @@ const CrosswordPuzzle = () => {
           })}
         </div>
 
-        <div className="md:pl-6 pt-2 font-bold">
+        <div className="md:pl-6 pt-10 md:pt-0 font-bold">
           <div className="text-xl pb-6 text-Tertiary">
+            <p className="text-Secondary pb-6 text-xl font-serif leading-relaxed">
+              {currentWord.num === 0
+                ? `${currentWord.clue}`
+                : `${currentWord.num}. ${currentWord.clue}`}
+            </p>
             <h3 className="mt-6 md:mt-0 mb-6 text-Secondary">
               Skills Include:
             </h3>
@@ -278,9 +294,6 @@ const CrosswordPuzzle = () => {
               ))}
             </ul>
           </div>
-          <p className="text-Secondary text-xl font-serif leading-loose">
-            {currentWord.clue}
-          </p>
         </div>
       </div>
     </div>
