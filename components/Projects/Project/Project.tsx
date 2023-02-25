@@ -13,12 +13,12 @@ type ProjectProps = {
 const Project = ({ title, description, skills, demo }: ProjectProps) => {
   return (
     <div className="">
-      <div className="flex flex-wrap">
+      <div className="hidden lg3:flex flex-wrap">
         {title.map((word, index) => {
           return (
             <h1
               key={index}
-              className="uppercase inline-flex text-fluid-7xl font-bold mb-4 px-1 bg-Secondary text-Primary rounded-sm mr-2"
+              className="uppercase inline-flex text-fluid-7xl font-bold mb-4 px-2 pt-1 bg-Secondary text-Primary rounded-sm mr-2"
             >
               {word}
             </h1>
@@ -26,7 +26,7 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
         })}
       </div>
       <p className="article-text mt-6">{description}</p>
-      <div className="grid grid-cols-3 mt-10 font-semibold">
+      <div className="md:grid grid-cols-3 mt-10 font-semibold">
         <ul className="flex flex-wrap gap-4 col-span-2 items-center">
           {skills.map((skill, index) => {
             return (
@@ -39,7 +39,7 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
             );
           })}
         </ul>
-        <div className="flex ml-auto items-start gap-4 text-lg">
+        <div className="flex ml-auto items-start gap-4 text-lg pt-8 md:pt-0 ">
           <Link
             href={demo}
             className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary"

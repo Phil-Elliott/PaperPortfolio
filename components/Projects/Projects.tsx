@@ -55,7 +55,7 @@ const Projects = () => {
       <div className="pt-6">
         {projectData.map((project, index) => {
           return index % 2 === 0 ? (
-            <div className="grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
+            <div className="flex flex-col-reverse lg3:grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
               <Project
                 key={index}
                 title={project.title}
@@ -63,11 +63,19 @@ const Projects = () => {
                 skills={project.skills}
                 demo={project.demo}
               />
-              <ProjectImage images={project.images} index={index} />
+              <ProjectImage
+                title={project.title}
+                images={project.images}
+                index={index}
+              />
             </div>
           ) : (
-            <div className="grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
-              <ProjectImage images={project.images} index={index} />
+            <div className="lg3:grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
+              <ProjectImage
+                title={project.title}
+                images={project.images}
+                index={index}
+              />
               <Project
                 key={index}
                 title={project.title}
@@ -87,14 +95,11 @@ export default Projects;
 
 /*
 
-Same design as for each project but alternate
+1) Make left side responsive
+  - Have Right bttns go under tags
 
-Left
-    - title
-    - description
-    - skills used
-    - Button for Demo
-Right 
-    - image
+
+2) Have the images go below the project (maybe just one image)
+3) Add magnifying glass to the images
 
 */
