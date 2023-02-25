@@ -39,7 +39,7 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
             );
           })}
         </ul>
-        <div className="flex ml-auto items-start gap-4 text-lg pt-8 md:pt-0 ">
+        <div className="flex ml-auto items-start gap-4 text-lg pt-5 md:pt-0 ">
           <Link
             href={demo}
             className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary"
