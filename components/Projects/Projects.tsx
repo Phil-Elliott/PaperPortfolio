@@ -49,7 +49,7 @@ const projectData = [
 const Projects = () => {
   return (
     <div id="projects">
-      <h1 className="border-y-2 border-Secondary text-6xl text-center py-4 font-bold tracking-wide">
+      <h1 className="border-y-2 border-Secondary sm:text-5xl text-fluid-9xl leading-snug text-center py-4 font-bold tracking-wide">
         Featured Projects
       </h1>
       <div className="pt-6">
