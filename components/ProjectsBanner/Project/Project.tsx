@@ -17,6 +17,13 @@ const Project = ({ name, description, image, newProject }: ProjectProps) => {
           src={image.src}
           alt={name}
           fill
+          height={0}
+          width={0}
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+          loading="eager"
+          priority
           className="object-cover object-left-top border-2 border-Border rounded-sm shadow-sm"
         />
       </div>

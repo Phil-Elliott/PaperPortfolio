@@ -14,7 +14,6 @@ export default function Home() {
       <Head>
         <title>Portfolio | Phillip Elliott</title>
         <meta name="description" content="Phillip Elliott Portfolio Website" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="sm:border-2 border-Secondary p-4 lg:p-6 min-h-screen min-w-screen overflow-hidden">
         <Header />
@@ -32,9 +31,9 @@ export default function Home() {
 }
 
 /*
-4) Fix cards (figure out text and add more spacing)
-5) Fix crossword puzzle (add numbers) 
-8) Make responsive 
+
+
+
 10) Fix image in main section (maybe start from top or just edit the image)
 
 6) Start adding project information

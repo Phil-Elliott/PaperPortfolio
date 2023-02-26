@@ -55,9 +55,11 @@ const Projects = () => {
       <div className="pt-6">
         {projectData.map((project, index) => {
           return index % 2 === 0 ? (
-            <div className="flex flex-col-reverse lg3:grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
+            <div
+              key={index}
+              className="flex flex-col-reverse lg3:grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6"
+            >
               <Project
-                key={index}
                 title={project.title}
                 description={project.description}
                 skills={project.skills}
@@ -70,7 +72,10 @@ const Projects = () => {
               />
             </div>
           ) : (
-            <div className="lg3:grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6">
+            <div
+              key={index}
+              className="lg3:grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6"
+            >
               <ProjectImage
                 title={project.title}
                 images={project.images}

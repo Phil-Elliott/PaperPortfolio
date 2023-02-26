@@ -22,7 +22,7 @@ const skills = [
   "React",
   "Next.js",
   "Redux",
-  "SCSS",
+  "SASS",
   "Tailwind",
   "PostgreSQL",
 ];
@@ -233,17 +233,19 @@ const CrosswordPuzzle = () => {
               >
                 {row.map((cell, j) =>
                   cell !== "" ? (
-                    <div className="bg-Primary border-2 border-Secondary text-center uppercase font-black text-md z-5 relative">
+                    <div
+                      key={j}
+                      className="bg-Primary border-2 border-Secondary text-center uppercase font-black text-md z-5 relative"
+                    >
                       {numbers[i][j] !== 0 && (
                         <span className="absolute text-Secondary text-sm p-1 font-black z-10">
                           {numbers[i][j]}
                         </span>
                       )}
                       <input
-                        key={j}
                         id={`cell-${i}-${j}`}
                         type="text"
-                        className="bg-Primary py-1 text-center uppercase font-black text-md z-8 w-full h-full"
+                        className="bg-Primary py-1 text-center uppercase font-black text-md z-8 w-full h-full focus:outline-none"
                         data-row={i}
                         data-col={j}
                         maxLength={1}
