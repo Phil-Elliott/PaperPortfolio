@@ -11,12 +11,12 @@ const JobWanted = () => {
           WEB DEVELOPER POSITION
         </h2>
         <p className="mt-6 article-text">
-          As I search for a programming job, I want to highlight my adaptability
-          and eagerness to learn. While I have significant experience in
-          frontend web development, I am willing and excited to tackle any
-          programming tasks that may come my way. My primary goal is to
-          contribute my skills to the team and help create excellent software
-          solutions.
+          I am seeking a position in web development where I can leverage my
+          experience in creating frontend web applications. However, I am also
+          enthusiastic about learning new skills and technologies as required by
+          the position. My top priorities are finding a role that allows me to
+          continue growing and expanding my skillset, and where I can
+          collaborate with and contribute to a dynamic team.
         </p>
       </div>
     </div>

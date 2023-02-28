@@ -5,6 +5,7 @@ import { RiGithubLine } from "react-icons/ri";
 import { SlSocialLinkedin } from "react-icons/sl";
 import ResponsiveMenu from "./ResponsiveMenu/ResponsiveMenu";
 import Link from "next/link";
+import { StyledTooltip } from "../shared/ToolTips/Tooltip";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,27 +18,33 @@ const Header = () => {
       /> */}
       <div className="flex justify-between items-center pb-6">
         <div className="hidden lg:flex items-center space-x-4 text-xl">
-          <a
-            aria-label="LinkedIn"
-            href="https://www.linkedin.com/in/phil-p-elliott/"
-            className="hover:text-Tertiary"
-          >
-            <SlSocialLinkedin />
-          </a>
-          <a
-            className="hover:text-Tertiary"
-            aria-label="Github"
-            href="https://github.com/Phil-Elliott"
-          >
-            <RiGithubLine />
-          </a>
-          <a
-            className="hover:text-Tertiary"
-            aria-label="Email"
-            href="mailto:PhillipPElliott@gmail.com"
-          >
-            <AiOutlineMail />
-          </a>
+          <StyledTooltip title="LinkedIn">
+            <a
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/phil-p-elliott/"
+              className="hover:text-Tertiary"
+            >
+              <SlSocialLinkedin />
+            </a>
+          </StyledTooltip>
+          <StyledTooltip title="Github">
+            <a
+              className="hover:text-Tertiary"
+              aria-label="Github"
+              href="https://github.com/Phil-Elliott"
+            >
+              <RiGithubLine />
+            </a>
+          </StyledTooltip>
+          <StyledTooltip title="Email">
+            <a
+              className="hover:text-Tertiary"
+              aria-label="Email"
+              href="mailto:PhillipPElliott@gmail.com"
+            >
+              <AiOutlineMail />
+            </a>
+          </StyledTooltip>
         </div>
         <h1 className="font-bold text-fluid-5xl lg:text-4xl tracking-wide">
           PHILLIP ELLIOTT

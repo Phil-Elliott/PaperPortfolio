@@ -8,9 +8,10 @@ type ProjectProps = {
   description: string;
   skills: string[];
   demo: string;
+  code: string;
 };
 
-const Project = ({ title, description, skills, demo }: ProjectProps) => {
+const Project = ({ title, description, skills, demo, code }: ProjectProps) => {
   return (
     <div className="">
       <div className="hidden lg3:flex flex-wrap">
@@ -48,7 +49,7 @@ const Project = ({ title, description, skills, demo }: ProjectProps) => {
             Demo
           </Link>
           <Link
-            href={demo}
+            href={code}
             className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary"
           >
             <FaGithubSquare className="mr-2" />

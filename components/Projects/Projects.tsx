@@ -8,7 +8,7 @@ const projectData = [
   {
     title: ["Simple", "Plan"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat.",
+      "This is a React-based application designed for task tracking within a project. It enables users to create projects and tasks, as well as move tasks across various sections using drag-and-drop functionality. Each task includes key details such as its due date, description, a comments section, and the assigned members for streamlined collaboration.",
     skills: [
       "React",
       "TypeScript",
@@ -17,31 +17,26 @@ const projectData = [
       "Strapi API",
       "PostgreSQL",
     ],
-    demo: "https://www.google.com",
+    demo: "https://timely-lollipop-f90b7b.netlify.app/",
+    code: "https://github.com/Phil-Elliott/Project_Management-App",
     images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
   },
   {
     title: ["Personal", "Blog"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat.",
-    skills: ["Next.Js", "TypeScript", "SCSS", "Sanity API"],
-    demo: "https://www.google.com",
+      "A blog built with Next.js and Sanity.io. I enjoyed building this a lot, but I have not written too many articles. With a clean and minimalist design, my blog aims to deliver content in an easy-to-read format that is accessible to all. Thanks to the power of Next.js, users can navigate through the site with ease and enjoy a fast, seamless experience. On the backend, I use Sanity.io to manage and organize my content.",
+    skills: ["Next.Js", "SCSS", "Sanity API"],
+    demo: "https://www.philelliottblog.com/",
+    code: "https://github.com/Phil-Elliott/Phillip_Elliott_Blog",
     images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
   },
   {
-    title: ["Ecommerce", "Store"],
+    title: ["News", "Website"],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat.",
-    skills: ["React", "TypeScript", "Sass"],
-    demo: "https://www.google.com",
-    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
-  },
-  {
-    title: ["Card", "Game"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti vitae numquam sapiente ea hic esse quis odit distinctio assumenda, asperiores sed quos minima in, explicabo corporis beatae, excepturi error placeat.",
-    skills: ["React", "TypeScript", "Sass"],
-    demo: "https://www.google.com",
+      "This news application is built using React, TypeScript, and SCSS, and it connects to the Guardian API to provide users with a diverse range of news tags to choose from. The user-friendly interface includes a search bar that enables users to quickly find specific news articles of interest.",
+    skills: ["React", "TypeScript", "SCSS"],
+    demo: "https://pedantic-bhabha-23f3dd.netlify.app/",
+    code: "https://github.com/Phil-Elliott/News-Website",
     images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
   },
 ];
@@ -64,6 +59,7 @@ const Projects = () => {
                 description={project.description}
                 skills={project.skills}
                 demo={project.demo}
+                code={project.code}
               />
               <ProjectImage
                 title={project.title}
@@ -87,6 +83,7 @@ const Projects = () => {
                 description={project.description}
                 skills={project.skills}
                 demo={project.demo}
+                code={project.code}
               />
             </div>
           );

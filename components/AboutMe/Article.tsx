@@ -78,10 +78,10 @@ const Article = ({
           index !== 3 && padding
         }`}
       >
-        <h1 className="article-header text-Tertiary text-3xl xs:text-fluid-5xl lg:text-5xl">
+        <h1 className="article-header text-Tertiary text-3xl xs:text-fluid-5xl lg:text-6xl pb-5">
           {title}
         </h1>
-        <p className="article-text lg2:text-2xl leading-[1.75] lg2:leading-[1.75]">
+        <p className="article-text lg2:text-2xl lg2:leading-[1.75] lg2:first-letter:text-5xl lg2:first-letter:p-3">
           {description}
         </p>
       </div>

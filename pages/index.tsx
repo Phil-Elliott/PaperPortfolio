@@ -32,16 +32,11 @@ export default function Home() {
 
 /*
 
+Fix writing on everything 
+Add pictures to everything
+Fix up resume 
+Add resume 
+Add gsap or framer motion animations
 
 
-10) Fix image in main section (maybe start from top or just edit the image)
-
-6) Start adding project information
-11) Add projects to banner on top
-3) Add resume to button link
-  9) Host it
-
-  get good lighthouse score
-
-  could make hamburger nav work or just get rid of it
 */

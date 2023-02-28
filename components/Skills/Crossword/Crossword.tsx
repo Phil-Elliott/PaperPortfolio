@@ -24,7 +24,8 @@ const skills = [
   "Redux",
   "SASS",
   "Tailwind",
-  "PostgreSQL",
+  // "PostgreSQL",
+  // "Jest",
 ];
 
 const CrosswordPuzzle = () => {
@@ -133,7 +134,6 @@ const CrosswordPuzzle = () => {
 
   // Moves to the next cell
   function nextCell(row: number, col: number) {
-    console.log("next", stateDirection);
     let nextCell;
     // let direction = findWord(row, col);
 
@@ -243,6 +243,7 @@ const CrosswordPuzzle = () => {
                         </span>
                       )}
                       <input
+                        aria-label="cell"
                         id={`cell-${i}-${j}`}
                         type="text"
                         className="bg-Primary py-1 text-center uppercase font-black text-md z-8 w-full h-full focus:outline-none"
@@ -287,9 +288,7 @@ const CrosswordPuzzle = () => {
                 ? `${currentWord.clue}`
                 : `${currentWord.num}. ${currentWord.clue}`}
             </p>
-            <h3 className="mt-6 md:mt-0 mb-6 text-Secondary">
-              Skills Include:
-            </h3>
+            <p className="mt-6 md:mt-0 mb-6 text-Secondary">Skills Include:</p>
             <ul className="list-disc list-inside flex flex-wrap gap-7 ">
               {skills.map((skill) => (
                 <li key={skill}>{skill}</li>

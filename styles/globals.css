@@ -11,7 +11,7 @@
 
 @layer components {
   .article-text {
-    @apply first-letter:bg-Secondary first-letter:text-Primary first-letter:p-3 first-letter:rounded first-letter:float-left first-letter:mr-4 first-letter:text-4xl first-letter:font-bold text-xl leading-loose;
+    @apply first-letter:bg-Secondary first-letter:text-Primary first-letter:p-3 first-letter:rounded first-letter:float-left first-letter:mt-2 first-letter:mr-4 first-letter:text-4xl first-letter:font-bold text-xl leading-loose;
   }
   .article-header {
     @apply text-5xl font-black font-serif leading-loose pb-4;
