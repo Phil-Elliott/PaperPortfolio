@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import FrontPageImage from "../../assets/images/FrontPageImage.png";
+import FrontPageImage from "../../assets/images/ProfileImage.png";
 
 const FrontPage = () => {
   return (

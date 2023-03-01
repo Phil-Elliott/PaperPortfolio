@@ -1,7 +1,8 @@
 import React from "react";
 import Project from "./Project/Project";
-import ProjectImage1 from "../../assets/images/FitMax.png";
-import ProjectImage2 from "../../assets/images/news.png";
+import ProjectImage1 from "../../assets/images/PM-Dashboard.png";
+import ProjectImage2 from "../../assets/images/News-Home.png";
+import ProjectImage3 from "../../assets/images/BlogHome.png";
 import ProjectImage from "./Project/ProjectImage";
 
 const projectData = [
@@ -9,26 +10,19 @@ const projectData = [
     title: ["Simple", "Plan"],
     description:
       "This is a React-based application designed for task tracking within a project. It enables users to create projects and tasks, as well as move tasks across various sections using drag-and-drop functionality. Each task includes key details such as its due date, description, a comments section, and the assigned members for streamlined collaboration.",
-    skills: [
-      "React",
-      "TypeScript",
-      "SCSS",
-      "Redux",
-      "Strapi API",
-      "PostgreSQL",
-    ],
+    skills: ["React", "TypeScript", "SCSS", "Redux", "Strapi API"],
     demo: "https://timely-lollipop-f90b7b.netlify.app/",
     code: "https://github.com/Phil-Elliott/Project_Management-App",
-    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
+    images: [ProjectImage1, ProjectImage1, ProjectImage1, ProjectImage1],
   },
   {
     title: ["Personal", "Blog"],
     description:
       "A blog built with Next.js and Sanity.io. I enjoyed building this a lot, but I have not written too many articles. With a clean and minimalist design, my blog aims to deliver content in an easy-to-read format that is accessible to all. Thanks to the power of Next.js, users can navigate through the site with ease and enjoy a fast, seamless experience. On the backend, I use Sanity.io to manage and organize my content.",
-    skills: ["Next.Js", "SCSS", "Sanity API"],
+    skills: ["Next.js", "SCSS", "Sanity API"],
     demo: "https://www.philelliottblog.com/",
     code: "https://github.com/Phil-Elliott/Phillip_Elliott_Blog",
-    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
+    images: [ProjectImage3, ProjectImage3, ProjectImage3, ProjectImage3],
   },
   {
     title: ["News", "Website"],
@@ -37,7 +31,7 @@ const projectData = [
     skills: ["React", "TypeScript", "SCSS"],
     demo: "https://pedantic-bhabha-23f3dd.netlify.app/",
     code: "https://github.com/Phil-Elliott/News-Website",
-    images: [ProjectImage1, ProjectImage2, ProjectImage2, ProjectImage1],
+    images: [ProjectImage2, ProjectImage2, ProjectImage2, ProjectImage2],
   },
 ];
 

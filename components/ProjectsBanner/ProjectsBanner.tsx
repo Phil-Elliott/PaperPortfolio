@@ -1,6 +1,8 @@
 import React from "react";
-import ProjectImage1 from "../../assets/images/FitMax.png";
-import ProjectImage2 from "../../assets/images/news.png";
+import ProjectImage1 from "../../assets/images/PM-Dashboard.png";
+import ProjectImage2 from "../../assets/images/News-Home.png";
+import ProjectImage3 from "../../assets/images/BlogHome.png";
+import ProjectImage4 from "../../assets/images/code.jpg";
 import Project from "./Project/Project";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -16,7 +18,7 @@ const ProjectsInfo = [
   {
     name: "Personal Blog",
     description: "A blog built with Next.js and Sanity.io",
-    image: ProjectImage2,
+    image: ProjectImage3,
     link: "https://www.philelliottblog.com/",
   },
   {
@@ -30,7 +32,7 @@ const ProjectsInfo = [
     name: "Coming Soon",
     description:
       "I am always working on new projects, so check back soon to see what I have been up to!",
-    image: ProjectImage2,
+    image: ProjectImage4,
     link: "/",
   },
 ];

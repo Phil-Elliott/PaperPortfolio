@@ -50,7 +50,9 @@ const Header = () => {
           PHILLIP ELLIOTT
         </h1>
         <div className="hidden lg:flex">
-          <Button>Resume</Button>
+          <a href="./Resume.pdf">
+            <Button>Resume</Button>
+          </a>
         </div>
         {/* <div className="lg:hidden space-y-2" onClick={() => setMenuOpen(true)}>
           <span className="block w-8 h-0.5 bg-gray-600"></span>

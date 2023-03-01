@@ -81,8 +81,10 @@ module.exports = {
       colors: {
         Background: "#181818",
         Primary: "#efefef",
-        Secondary: "rgba(26, 28, 26, 0.9)",
-        Tertiary: "rgba(199, 57, 43, 0.8)",
+        // Secondary: "rgba(26, 28, 26, 0.9)",
+        Secondary: "#302f2b",
+        // Tertiary: "rgba(199, 57, 43, 0.8)",
+        Tertiary: "#cf5d52",
         Border: "rgba(26, 28, 26, 0.9)",
         Black: "#1d1d1b",
       },
