@@ -33,7 +33,6 @@ export default function Home() {
 /*
 
 1) Make writing smaller on slider responsive or switch to just showing skills 
-2) Fix border on projects
 3) Add some animations
 
 4) Make hamburger menu

@@ -60,7 +60,7 @@ const ProjectsBanner = () => {
           slidesPerView: 3,
         },
       }}
-      className="my-6 border-Border items-center justify-between h-60 cursor-grab active:cursor-grabbing select-none"
+      className="my-6 border-Border items-center justify-between h-72 sm:h-60 cursor-grab active:cursor-grabbing select-none"
     >
       <SwiperSlide>
         <Project
