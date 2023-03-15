@@ -32,6 +32,16 @@ export default function Home() {
 
 /*
 
+1) Make writing smaller on slider responsive or switch to just showing skills 
+2) Fix border on projects
+3) Add some animations
+
+4) Make hamburger menu
+5) Make responsive content look better
+6) Write documentation
+7) Fix picture on main page
+
+
 Fix writing on everything 
 Add pictures to everything
 Fix up resume 

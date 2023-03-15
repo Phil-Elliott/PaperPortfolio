@@ -11,9 +11,7 @@ type ProjectImageProps = {
 
 const ProjectImage = ({ title, images, index }: ProjectImageProps) => {
   const isEven = index % 2 === 0;
-  const border = !isEven
-    ? "lg3:border-r-2 lg3:pr-6"
-    : "lg3:border-l-2 lg3:pl-6";
+  const border = !isEven ? "lg3:border-r-2 lg3:pr-6" : "";
 
   return (
     <div className={` border-Secondary  ${border}`}>

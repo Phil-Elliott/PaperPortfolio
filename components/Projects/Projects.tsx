@@ -54,6 +54,7 @@ const Projects = () => {
                 skills={project.skills}
                 demo={project.demo}
                 code={project.code}
+                index={index}
               />
               <ProjectImage
                 title={project.title}
@@ -78,6 +79,7 @@ const Projects = () => {
                 skills={project.skills}
                 demo={project.demo}
                 code={project.code}
+                index={index}
               />
             </div>
           );

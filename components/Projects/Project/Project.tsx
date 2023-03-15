@@ -9,11 +9,22 @@ type ProjectProps = {
   skills: string[];
   demo: string;
   code: string;
+  index: number;
 };
 
-const Project = ({ title, description, skills, demo, code }: ProjectProps) => {
+const Project = ({
+  title,
+  description,
+  skills,
+  demo,
+  code,
+  index,
+}: ProjectProps) => {
+  const isEven = index % 2 === 0;
+  const border = !isEven ? "" : "lg3:border-r-2 lg3:pr-6";
+
   return (
-    <div className="">
+    <div className={` border-Secondary  ${border}`}>
       <div className="hidden lg3:flex flex-wrap">
         {title.map((word, index) => {
           return (
