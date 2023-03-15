@@ -37,7 +37,7 @@ const Article = ({
         `lg2:translate-x-0`,
         `lg2:translate-x-[-8%]`,
         `lg2:translate-x-[-85%]`,
-        `lg2:translate-x-[-160%]`,
+        `lg2:translate-x-[-159%]`,
       ]);
       setTranslateY([`${y}0`, `${y}[-50%]`, `${y}[-120%]`, `${y}[-175%]`]);
     } else if (hovered === 1) {
@@ -45,7 +45,7 @@ const Article = ({
         `lg2:translate-x-0`,
         `lg2:translate-x-[-75%]`,
         `lg2:translate-x-[-85%]`,
-        `lg2:translate-x-[-160%]`,
+        `lg2:translate-x-[-159%]`,
       ]);
       setTranslateY([`${y}0`, `${y}[-50%]`, `${y}[-120%]`, `${y}[-175%]`]);
     } else if (hovered === 2) {
@@ -53,7 +53,7 @@ const Article = ({
         `lg2:translate-x-0`,
         `lg2:translate-x-[-75%]`,
         `lg2:translate-x-[-150%]`,
-        `lg2:translate-x-[-160%]`,
+        `lg2:translate-x-[-159%]`,
       ]);
       setTranslateY([`${y}0`, `${y}[-50%]`, `${y}[-120%]`, `${y}[-175%]`]);
     } else if (hovered === 3) {
