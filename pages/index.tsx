@@ -75,9 +75,7 @@ export default function Home() {
 
 /*
 
-First animation 
-- Slide up 
-- Spin and zoom in
+
 
 Animate zoom in with project images
 

@@ -223,7 +223,7 @@ const CrosswordPuzzle = () => {
       <h1 className="text-fluid-9xl sm:text-5xl article-header uppercase md:tracking-widest leading-snug mb-2 py-4">
         Skills Crossword
       </h1>
-      <div className=" md:grid grid-cols-2 lg3:pt-4">
+      <div className=" md:grid grid-cols-2">
         <div className="">
           {grid.map((row, i) => {
             return (

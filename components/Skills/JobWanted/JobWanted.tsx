@@ -7,16 +7,13 @@ const JobWanted = () => {
         JOB WANTED!
       </h1>
       <div>
-        <h2 className="xs:leading-relaxed text-fluid-5xl xs:text-3xl font-bold text-center mt-6 leading-relaxed">
+        <h2 className="xs:leading-relaxed text-fluid-5xl xs:text-3xl font-bold text-center my-6 leading-relaxed">
           WEB DEVELOPER POSITION
         </h2>
-        <p className="mt-6 article-text">
-          I am seeking a position in web development where I can leverage my
-          experience in creating frontend web applications. However, I am also
-          enthusiastic about learning new skills and technologies as required by
-          the position. My top priorities are finding a role that allows me to
-          continue growing and expanding my skillset, and where I can
-          collaborate with and contribute to a dynamic team.
+        <p className="text-2xl leading-loose">
+          Seeking role for growth and collaboration. Passionate about staying
+          up-to-date with the latest technologies and learning new skills. Top
+          priorities are skillset expansion and contributing to a dynamic team.
         </p>
       </div>
     </div>
@@ -27,9 +24,17 @@ export default JobWanted;
 
 /*
 
+    
+
+
      Use react particles js for multiple images floating on screen
 
-
+I am seeking a position in web development where I can leverage my
+          experience in creating frontend web applications. However, I am also
+          enthusiastic about learning new skills and technologies as required by
+          the position. My top priorities are finding a role that allows me to
+          continue growing and expanding my skillset, and where I can
+          collaborate with and contribute to a dynamic team.
 
 
     dark mode where you have a flashlight
