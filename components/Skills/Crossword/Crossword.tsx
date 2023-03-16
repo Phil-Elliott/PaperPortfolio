@@ -224,7 +224,7 @@ const CrosswordPuzzle = () => {
         Skills Crossword
       </h1>
       <div className=" md:grid grid-cols-2">
-        <div>
+        <div className="">
           {grid.map((row, i) => {
             return (
               <div

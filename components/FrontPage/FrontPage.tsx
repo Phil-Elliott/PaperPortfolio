@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import FrontPageImage from "../../assets/images/ProfileImage.png";
+import FrontPageImage from "../../assets/images/web-dev.jpg";
 
 const FrontPage = () => {
   return (
@@ -33,7 +33,7 @@ const FrontPage = () => {
               33vw"
           loading="eager"
           priority
-          className="object-cover object-bottom"
+          className="object-cover object-center"
         />
       </div>
     </div>

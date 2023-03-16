@@ -46,7 +46,7 @@ const Projects = () => {
           return index % 2 === 0 ? (
             <div
               key={index}
-              className="flex flex-col-reverse lg3:grid grid-cols-2 gap-6 mb-6 border-b-2 border-Secondary pb-6"
+              className="flex flex-col-reverse lg3:grid grid-cols-2 lg3:gap-6 mb-6 border-b-2 border-Secondary pb-6"
             >
               <Project
                 title={project.title}
