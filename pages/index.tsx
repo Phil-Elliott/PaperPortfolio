@@ -31,6 +31,19 @@ export default function Home() {
 }
 
 /*
+
+First animation 
+- Slide up 
+- Spin and zoom in
+
+Animate zoom in with project images
+
+Have everything slide up on scroll
+
+
+
+
+
 3) Add some animations
 
 4) Make hamburger menu

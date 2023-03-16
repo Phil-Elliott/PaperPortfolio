@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Button from "../../shared/Button/Button";
+import Link from "next/link";
 
 type ProjectImageProps = {
   title: string[];
   images: StaticImageData[];
   index: number;
+  demo: string;
 };
 
-const ProjectImage = ({ title, images, index }: ProjectImageProps) => {
+const ProjectImage = ({ title, images, index, demo }: ProjectImageProps) => {
+  const [selectedId, setSelectedId] = useState(null);
+
   const isEven = index % 2 === 0;
   const border = !isEven ? "lg3:border-r-2 lg3:pr-6" : "";
 
@@ -41,14 +45,16 @@ const ProjectImage = ({ title, images, index }: ProjectImageProps) => {
           );
         })}
       </div>
-      <div className="relative h-60 lg3:h-full mt-2 lg3:mt-0">
-        <Image
-          alt="project image"
-          src={images[0].src}
-          fill
-          className="object-cover object-left-top grayscale  border-2 border-Border rounded-sm shadow-sm"
-        />
-      </div>
+      <Link href={demo}>
+        <div className="relative h-60 lg3:h-full mt-2 lg3:mt-0">
+          <Image
+            alt="project image"
+            src={images[0].src}
+            fill
+            className="object-cover object-left-top grayscale  border-2 border-Border rounded-sm shadow-sm"
+          />
+        </div>
+      </Link>
     </div>
     // </div>
   );
@@ -57,6 +63,29 @@ const ProjectImage = ({ title, images, index }: ProjectImageProps) => {
 export default ProjectImage;
 
 /*
+
+const [selectedId, setSelectedId] = useState(null)
+ 
+{items.map(item => (
+  <motion.div layoutId={item.id} onClick={() => setSelectedId(item.id)}>
+    <motion.h5>{item.subtitle}</motion.h5>
+    <motion.h2>{item.title}</motion.h2>
+  </motion.div>
+))}
+
+<AnimatePresence>
+  {selectedId && (
+    <motion.div layoutId={selectedId}>
+      <motion.h5>{item.subtitle}</motion.h5>
+      <motion.h2>{item.title}</motion.h2>
+      <motion.button onClick={() => setSelectedId(null)} />
+    </motion.div>
+  )}
+</AnimatePresence>
+
+
+
+
 - need to have magnifying glass on hover
 - popup on click
 
