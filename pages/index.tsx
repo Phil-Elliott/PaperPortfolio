@@ -8,39 +8,67 @@ import Footer from "../components/Footer/Footer";
 
 import Head from "next/head";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [render, setRender] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [boxVariants, setBoxVariants] = useState<any>({
+    initial: {
+      rotate: 0,
+      scale: 0.75,
+      y: 0,
+    },
+    animate: {
+      rotate: [0, 0, 360],
+      scale: [0.75, 0.75, 1],
+      y: [0, -300, 0],
+    },
+    transition: {
+      duration: 3,
+    },
+  });
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.innerWidth <= 768) {
+      setIsMobile(true);
+      setRender(true);
+    } else {
+      setIsMobile(false);
+      setRender(true);
+    }
+  }, []);
+
   return (
     <div className="bg-Secondary">
-      <motion.div
-        initial={{ rotate: 0, scale: 0.75, y: 0 }}
-        animate={{
-          rotate: [0, 0, 360],
-          scale: [0.75, 0.75, 1],
-          y: [0, -300, 0],
-        }}
-        transition={{ duration: 3 }}
-        className="bg-Primary text-Secondary sm:p-2 font-sans overflow-hidden"
-      >
-        <Head>
-          <title>Portfolio | Phillip Elliott</title>
-          <meta
-            name="description"
-            content="Phillip Elliott Portfolio Website"
-          />
-        </Head>
-        <div className="sm:border-2 border-Secondary p-4 lg:p-6 min-h-screen min-w-screen overflow-hidden">
-          <Header />
-          <ProjectsBanner />
-          <FrontPage />
-          <div id="about">
-            <AboutMe />
+      {render === true && (
+        <motion.div
+          transition={{ duration: 3 }}
+          initial={!isMobile ? "initial" : ""}
+          animate={!isMobile ? "animate" : ""}
+          variants={boxVariants}
+          className="bg-Primary text-Secondary sm:p-2 font-sans overflow-hidden"
+        >
+          <Head>
+            <title>Portfolio | Phillip Elliott</title>
+            <meta
+              name="description"
+              content="Phillip Elliott Portfolio Website"
+            />
+          </Head>
+          <div className="sm:border-2 border-Secondary p-4 lg:p-6 min-h-screen min-w-screen overflow-hidden">
+            <Header />
+            <ProjectsBanner />
+            <FrontPage />
+            <div id="about">
+              <AboutMe />
+            </div>
+            <Skills />
+            <Projects />
+            <Footer />
           </div>
-          <Skills />
-          <Projects />
-          <Footer />
-        </div>
-      </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 }

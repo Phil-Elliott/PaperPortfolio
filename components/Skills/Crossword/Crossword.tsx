@@ -219,11 +219,11 @@ const CrosswordPuzzle = () => {
   };
 
   return (
-    <div className="h-full lg3:px-6 ">
+    <div className="h-full lg3:px-6">
       <h1 className="text-fluid-9xl sm:text-5xl article-header uppercase md:tracking-widest leading-snug mb-2 py-4">
         Skills Crossword
       </h1>
-      <div className=" md:grid grid-cols-2">
+      <div className=" md:grid grid-cols-2 lg3:pt-4">
         <div className="">
           {grid.map((row, i) => {
             return (
@@ -281,19 +281,23 @@ const CrosswordPuzzle = () => {
           })}
         </div>
 
-        <div className="md:pl-6 pt-10 md:pt-0 font-bold">
-          <div className="text-xl pb-6 text-Tertiary">
+        <div className="md:pl-6 pt-10 md:pt-0 font-bold lg3:border-l-2 border-Secondary lg3:ml-6">
+          <div className="text-xl pb-6 text-Tertiary h-full flex flex-col justify-between">
             <p className="text-Secondary pb-6 text-xl font-serif leading-relaxed">
               {currentWord.num === 0
                 ? `${currentWord.clue}`
                 : `${currentWord.num}. ${currentWord.clue}`}
             </p>
-            <p className="mt-6 md:mt-0 mb-6 text-Secondary">Skills Include:</p>
-            <ul className="list-disc list-inside flex flex-wrap gap-7 ">
-              {skills.map((skill) => (
-                <li key={skill}>{skill}</li>
-              ))}
-            </ul>
+            <div>
+              <p className="pt-6 md:mt-0 mb-6 text-Secondary lg3:border-t-2 border-Secondary">
+                Skills Include:
+              </p>
+              <ul className="list-disc list-inside flex flex-wrap gap-7 ">
+                {skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

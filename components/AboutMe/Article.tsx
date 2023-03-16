@@ -71,7 +71,7 @@ const Article = ({
     <div
       onMouseOver={() => handleHover(index)}
       onMouseLeave={() => handleHover(3)}
-      className={`border-t-2 mb-6 pt-4 lg2:shadow-lg lg2:p-3 lg2:border-2 border-Secondary lg2:rounded-md left-0 z-${index} lg2:bg-Primary transition-all duration-500 ease-in-out w-full translate-x-0 ${translateX[index]}`}
+      className={`border-t-2 mb-6 pt-6 lg2:shadow-lg lg2:p-3 lg2:border-2 border-Secondary lg2:rounded-md left-0 z-${index} lg2:bg-Primary transition-all duration-500 ease-in-out w-full translate-x-0 ${translateX[index]}`}
     >
       <div
         className={`h-full lg2:p-6 border-Secondary lg2:outline-dotted rounded ${
