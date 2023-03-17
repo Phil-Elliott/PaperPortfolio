@@ -19,14 +19,14 @@ const Header = ({ toggleMenu }: HeaderProps) => {
             <a
               aria-label="LinkedIn"
               href="https://www.linkedin.com/in/phil-p-elliott/"
-              className="hover:text-Tertiary"
+              className="hover:text-Tertiary duration-200"
             >
               <SlSocialLinkedin />
             </a>
           </StyledTooltip>
           <StyledTooltip title="Github">
             <a
-              className="hover:text-Tertiary"
+              className="hover:text-Tertiary duration-200"
               aria-label="Github"
               href="https://github.com/Phil-Elliott"
             >
@@ -35,7 +35,7 @@ const Header = ({ toggleMenu }: HeaderProps) => {
           </StyledTooltip>
           <StyledTooltip title="Email">
             <a
-              className="hover:text-Tertiary"
+              className="hover:text-Tertiary duration-200"
               aria-label="Email"
               href="mailto:PhillipPElliott@gmail.com"
             >
@@ -61,15 +61,15 @@ const Header = ({ toggleMenu }: HeaderProps) => {
       </div>
       <div className="hidden lg:flex justify-between items-center py-3 border-y-2 border-Border text-lg font-semibold">
         <Link href={"#front"}>
-          <h2 className="hover:text-Tertiary">Front Page</h2>
+          <h2 className="hover:text-Tertiary duration-200">Front Page</h2>
         </Link>
-        <Link className="hover:text-Tertiary" href={"#about"}>
+        <Link className="hover:text-Tertiary duration-200" href={"#about"}>
           <h2>About Me</h2>
         </Link>
-        <Link className="hover:text-Tertiary" href={"#skills"}>
+        <Link className="hover:text-Tertiary duration-200" href={"#skills"}>
           <h2>My Skills</h2>
         </Link>
-        <Link className="hover:text-Tertiary" href={"#projects"}>
+        <Link className="hover:text-Tertiary duration-200" href={"#projects"}>
           <h2>Featured Projects</h2>
         </Link>
       </div>

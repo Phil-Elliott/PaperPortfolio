@@ -54,14 +54,14 @@ const Project = ({
         <div className="flex ml-auto items-start gap-4 text-lg pt-5 md:pt-0 ">
           <Link
             href={demo}
-            className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary"
+            className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary duration-500"
           >
             <MdLaunch className="mr-2" />
             Demo
           </Link>
           <Link
             href={code}
-            className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary"
+            className="flex items-center text-Primary bg-Secondary p-2 rounded-sm hover:bg-Tertiary duration-500"
           >
             <FaGithubSquare className="mr-2" />
             Code

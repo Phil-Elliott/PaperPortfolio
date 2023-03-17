@@ -38,7 +38,7 @@ const ProjectImage = ({ title, images, index, demo }: ProjectImageProps) => {
           return (
             <h1
               key={index}
-              className="uppercase inline-flex text-4xl xs:text-6xl sm:text-fluid-7xl font-bold mb-4 px-2 pt-1 bg-Secondary text-Primary rounded-sm mr-2"
+              className="uppercase inline-flex text-5xl xs:text-7xl sm:text-fluid-7xl font-bold mb-4 px-2 pt-1 bg-Secondary text-Primary rounded-sm mr-2"
             >
               {word}
             </h1>

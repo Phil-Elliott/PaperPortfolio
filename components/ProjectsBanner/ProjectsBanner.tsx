@@ -86,7 +86,7 @@ const ProjectsBanner = () => {
           see.
         </h2>
         <h3 className="text-lg xs:text-xl text-Tertiary">
-          ← Drag me left and right →
+          ← Drag left and right →
         </h3>
       </SwiperSlide>
       <SwiperSlide>
