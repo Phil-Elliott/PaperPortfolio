@@ -79,9 +79,11 @@ const ProjectsBanner = () => {
           link={ProjectsInfo[0].link}
         />
       </SwiperSlide>
-      <SwiperSlide className="py-4 flex flex-col items-center justify-between text-center font-bold font-serif lg:border-x-2 border-Border xs:px-8 h-full">
-        <h1 className="text-fluid-9xl sm:text-4xl">Recent Projects</h1>
-        <h2 className="leading-relaxed xs:leading-relaxed text-lg xs:text-xl ">
+      <SwiperSlide className="border-Border border-t-2 lg:border-t-0 py-4 flex flex-col items-center justify-between text-center font-bold font-serif lg:border-x-2 border-Border xs:px-8 h-full">
+        <h1 className="text-fluid-9xl sm:text-4xl pt-3 lg:pt-0">
+          Recent Projects
+        </h1>
+        <h2 className="leading-relaxed xs:leading-relaxed text-lg xs:text-xl">
           Here are some projects that I have worked on. Click on the project to
           see.
         </h2>
