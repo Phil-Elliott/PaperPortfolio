@@ -7,10 +7,10 @@ const JobWanted = () => {
         JOB WANTED!
       </h1>
       <div>
-        <h2 className="xs:leading-relaxed text-fluid-5xl xs:text-3xl font-bold text-center my-6 leading-relaxed">
+        <h2 className="xs:leading-relaxed text-3xl font-bold text-center my-6 leading-relaxed">
           WEB DEVELOPER POSITION
         </h2>
-        <p className="text-2xl leading-loose">
+        <p className="text-xl leading-loose md:text-2xl md:leading-loose">
           Seeking role for growth and collaboration. Passionate about staying
           up-to-date with the latest technologies and learning new skills. Top
           priorities are skillset expansion and contributing to a dynamic team.

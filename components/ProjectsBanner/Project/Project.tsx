@@ -33,7 +33,7 @@ const Project = ({
               33vw"
             loading="eager"
             priority
-            className="object-cover object-left-top border-2 border-Border rounded-sm shadow-sm"
+            className="object-cover object-left-top border-2 border-Secondary rounded-sm shadow-sm"
           />
         </div>
         <div>

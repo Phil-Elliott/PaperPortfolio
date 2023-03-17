@@ -3,19 +3,16 @@ import Button from "../shared/Button/Button";
 import { AiOutlineMail, AiOutlineClose } from "react-icons/ai";
 import { RiGithubLine } from "react-icons/ri";
 import { SlSocialLinkedin } from "react-icons/sl";
-import ResponsiveMenu from "./ResponsiveMenu/ResponsiveMenu";
 import Link from "next/link";
 import { StyledTooltip } from "../shared/ToolTips/Tooltip";
 
-const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+type HeaderProps = {
+  toggleMenu: () => void;
+};
 
+const Header = ({ toggleMenu }: HeaderProps) => {
   return (
     <>
-      {/* <ResponsiveMenu
-        menuOpen={menuOpen}
-        closeMenu={() => setMenuOpen(false)}
-      /> */}
       <div className="flex justify-between items-center pb-6">
         <div className="hidden lg:flex items-center space-x-4 text-xl">
           <StyledTooltip title="LinkedIn">
@@ -54,10 +51,13 @@ const Header = () => {
             <Button>Resume</Button>
           </a>
         </div>
-        {/* <div className="lg:hidden space-y-2" onClick={() => setMenuOpen(true)}>
+        <div
+          className="lg:hidden space-y-2 cursor-pointer"
+          onClick={() => toggleMenu()}
+        >
           <span className="block w-8 h-0.5 bg-gray-600"></span>
           <span className="block w-5 h-0.5 bg-gray-600"></span>
-        </div> */}
+        </div>
       </div>
       <div className="hidden lg:flex justify-between items-center py-3 border-y-2 border-Border text-lg font-semibold">
         <Link href={"#front"}>
@@ -67,7 +67,7 @@ const Header = () => {
           <h2>About Me</h2>
         </Link>
         <Link className="hover:text-Tertiary" href={"#skills"}>
-          <h2>Skills</h2>
+          <h2>My Skills</h2>
         </Link>
         <Link className="hover:text-Tertiary" href={"#projects"}>
           <h2>Featured Projects</h2>

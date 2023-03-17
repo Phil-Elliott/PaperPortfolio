@@ -38,7 +38,7 @@ const Project = ({
         })}
       </div>
       <p className="article-text mt-6">{description}</p>
-      <div className="md:grid grid-cols-3 mt-10 font-semibold">
+      <div className="md:grid grid-cols-3 mt-5 lg3:mt-10 font-semibold">
         <ul className="flex flex-wrap gap-4 col-span-2 items-center">
           {skills.map((skill, index) => {
             return (

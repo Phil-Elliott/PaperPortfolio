@@ -9,8 +9,10 @@ import Footer from "../components/Footer/Footer";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import ResponsiveMenu from "../components/Header/ResponsiveMenu/ResponsiveMenu";
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [render, setRender] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [boxVariants, setBoxVariants] = useState<any>({
@@ -39,41 +41,57 @@ export default function Home() {
     }
   }, []);
 
+  function toggleMenu() {
+    setMenuOpen(!menuOpen);
+  }
+
   return (
-    <div className="bg-Secondary">
-      {render === true && (
-        <motion.div
-          transition={{ duration: 3 }}
-          initial={!isMobile ? "initial" : ""}
-          animate={!isMobile ? "animate" : ""}
-          variants={boxVariants}
-          className="bg-Primary text-Secondary sm:p-2 font-sans overflow-hidden"
-        >
-          <Head>
-            <title>Portfolio | Phillip Elliott</title>
-            <meta
-              name="description"
-              content="Phillip Elliott Portfolio Website"
-            />
-          </Head>
-          <div className="sm:border-2 border-Secondary p-4 lg:p-6 min-h-screen min-w-screen overflow-hidden">
-            <Header />
-            <ProjectsBanner />
-            <FrontPage />
-            <div id="about">
-              <AboutMe />
+    <div className="bg-Secondary h-screen">
+      {menuOpen ? (
+        <ResponsiveMenu
+          menuOpen={menuOpen}
+          closeMenu={() => setMenuOpen(false)}
+        />
+      ) : (
+        render === true && (
+          <motion.div
+            transition={{ duration: 3 }}
+            initial={!isMobile ? "initial" : ""}
+            animate={!isMobile ? "animate" : ""}
+            variants={boxVariants}
+            className="bg-Primary text-Secondary sm:p-2 font-sans overflow-hidden"
+          >
+            <Head>
+              <title>Portfolio | Phillip Elliott</title>
+              <meta
+                name="description"
+                content="Phillip Elliott Portfolio Website"
+              />
+            </Head>
+            <div className="sm:border-2 border-Secondary p-4 lg:p-6 min-h-screen min-w-screen overflow-hidden">
+              <Header toggleMenu={toggleMenu} />
+              <ProjectsBanner />
+              <FrontPage />
+              <div id="about">
+                <AboutMe />
+              </div>
+              <Skills />
+              <Projects />
+              <Footer />
             </div>
-            <Skills />
-            <Projects />
-            <Footer />
-          </div>
-        </motion.div>
+          </motion.div>
+        )
       )}
     </div>
   );
 }
 
 /*
+
+
+responsive menu
+   - could have the responsive menu show up from this page
+   - It shows that instead of the content
 
 
 
