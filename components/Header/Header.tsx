@@ -75,7 +75,7 @@ const Header = ({ toggleMenu }: HeaderProps) => {
       </div>
       <div className="bg-Tertiary text-Primary pb-1 sm:pb-0 pt-2 lg:mt-6 rounded-sm px-3">
         <h3 className="lg:tracking-wide text-fluid-9xl font-bold text-center ">
-          FRONT END DEVELOPER
+          FRONT-END DEVELOPER
         </h3>
       </div>
     </>

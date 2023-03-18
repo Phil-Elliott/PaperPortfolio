@@ -33,7 +33,7 @@ const Footer = () => {
         >
           Let's set up an interview
           <a
-            className="text-Primary bg-Secondary rounded-sm ml-3 p-1 hover:bg-Tertiary"
+            className="text-Primary bg-Secondary rounded-sm ml-3 p-1 hover:bg-Tertiary px-2 "
             aria-label="Email"
             href="mailto:PhillipPElliott@gmail.com"
           >
