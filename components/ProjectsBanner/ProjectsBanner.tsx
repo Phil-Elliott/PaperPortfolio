@@ -2,7 +2,7 @@ import React from "react";
 import ProjectImage1 from "../../assets/images/PM-Dashboard.png";
 import ProjectImage2 from "../../assets/images/News-Home.png";
 import ProjectImage3 from "../../assets/images/BlogHome.png";
-import ProjectImage4 from "../../assets/images/code.jpg";
+import ProjectImage4 from "../../assets/images/Portfolio.png";
 import Project from "./Project/Project";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -29,11 +29,10 @@ const ProjectsInfo = [
     link: "https://pedantic-bhabha-23f3dd.netlify.app/",
   },
   {
-    name: "Coming Soon",
-    description:
-      "I am always working on new projects, so check back soon to see what I have been up to!",
+    name: "This Portfolio",
+    description: "Built with Next.js, Tailwind, and Framer Motion.",
     image: ProjectImage4,
-    link: "/",
+    link: "https://github.com/Phil-Elliott/PaperPortfolio",
   },
 ];
 
