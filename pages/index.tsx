@@ -46,7 +46,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-Secondary h-full">
+    <div className="bg-Secondary h-full overflow-y-hidden">
       {menuOpen ? (
         <ResponsiveMenu
           menuOpen={menuOpen}
@@ -87,8 +87,6 @@ export default function Home() {
 }
 
 /*
-
-1) Add login details to pm app
 2) Add google analytics 
 3) Add larger black background
 
