@@ -46,7 +46,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-Secondary h-screen">
+    <div className="bg-Secondary h-full">
       {menuOpen ? (
         <ResponsiveMenu
           menuOpen={menuOpen}
@@ -87,6 +87,12 @@ export default function Home() {
 }
 
 /*
+
+1) Add login details to pm app
+2) Add google analytics 
+3) Add larger black background
+
+
 
 
 responsive menu

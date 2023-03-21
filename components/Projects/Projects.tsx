@@ -95,6 +95,8 @@ export default Projects;
 
 /*
 
+demoAccount: "Demo Account: Email: user@gmail.com Password: user1234",
+
 1) Make left side responsive
   - Have Right bttns go under tags
 
