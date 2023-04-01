@@ -5,27 +5,13 @@ import { BsDot } from "react-icons/bs";
 const Footer = () => {
   return (
     <div className=" overflow-hidden">
-      <div className="relative border-b-2 lg2:border-Secondary lg2:pb-6 flex items-center gap-12 ">
-        {/* <motion.h1
-          className="text-4xl font-bold flex"
-          initial={{ x: "100vw" }}
-          animate={{ x: "-100vw" }}
-          exit={{ x: "-150vw" }}
-          transition={{
-            duration: 15,
-            ease: "linear",
-            repeat: Infinity,
-            repeatDelay: 0,
-          }}
-        >
-          If you are looking for a developer
-        </motion.h1> */}
+      <div className="relative border-b-2 lg2:border-Secondary lg2:pb-6 flex items-center gap-12   w-[300vw]">
         <motion.h1
           className="uppercase text-4xl font-bold hidden lg2:flex items-center tracking-widest "
           initial={{ x: "100vw" }}
-          animate={{ x: "-100vw" }}
+          animate={{ x: "-200vw" }}
           transition={{
-            duration: 15,
+            duration: 20,
             ease: "linear",
             repeat: Infinity,
             repeatDelay: 0,
@@ -33,7 +19,49 @@ const Footer = () => {
         >
           Let's set up an interview
           <a
-            className="text-Primary bg-Secondary rounded-sm ml-3 p-1 hover:bg-Tertiary px-2 "
+            className="text-Primary bg-Secondary rounded-sm ml-3 p-1 hover:bg-Tertiary duration-500 px-2 "
+            aria-label="Email"
+            href="mailto:PhillipPElliott@gmail.com"
+          >
+            EMAIL ME
+          </a>
+        </motion.h1>
+        <motion.h1
+          className="uppercase text-4xl font-bold hidden lg2:flex items-center tracking-widest "
+          initial={{ x: "100vw" }}
+          animate={{ x: "-200vw" }}
+          transition={{
+            duration: 20,
+            ease: "linear",
+            delay: 2,
+            repeat: Infinity,
+            repeatDelay: 0,
+          }}
+        >
+          Let's set up an interview
+          <a
+            className="text-Primary bg-Secondary rounded-sm ml-3 p-1 hover:bg-Tertiary duration-500 px-2 "
+            aria-label="Email"
+            href="mailto:PhillipPElliott@gmail.com"
+          >
+            EMAIL ME
+          </a>
+        </motion.h1>
+        <motion.h1
+          className="uppercase text-4xl font-bold hidden lg2:flex items-center tracking-widest "
+          initial={{ x: "100vw" }}
+          animate={{ x: "-200vw" }}
+          transition={{
+            duration: 20,
+            ease: "linear",
+            delay: 4,
+            repeat: Infinity,
+            repeatDelay: 0,
+          }}
+        >
+          Let's set up an interview
+          <a
+            className="text-Primary bg-Secondary rounded-sm ml-3 p-1 hover:bg-Tertiary duration-500 px-2 "
             aria-label="Email"
             href="mailto:PhillipPElliott@gmail.com"
           >

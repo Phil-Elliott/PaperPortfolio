@@ -10,7 +10,7 @@ const JobWanted = () => {
         <h2 className="text-Secondary xs:leading-relaxed text-3xl font-bold text-center my-6 leading-relaxed">
           WEB DEVELOPER POSITION
         </h2>
-        <p className="indent-8 text-justify font-semibold text-xl leading-loose md:text-2xl md:leading-loose">
+        <p className="indent-8 text-justify text-xl leading-loose md:text-2xl md:leading-loose">
           Seeking role for growth and collaboration. Passionate about staying
           up-to-date with the latest technologies and learning new skills. Top
           priorities are skillset expansion and contributing to a dynamic team.
