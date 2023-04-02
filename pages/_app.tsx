@@ -30,6 +30,8 @@ export default function App({ Component, pageProps }: AppProps) {
 
 /*
 
+use framer motion path on image
+
 <script
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-00HF3CVKYC"
