@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import FrontPageImage from "../../assets/images/web-dev.jpg";
+import FrontPageImage from "../../assets/images/tv.png";
 
 const FrontPage = () => {
+  const [tvOn, setTvOn] = useState(false);
+
+  function toggleTv() {
+    setTvOn(!tvOn);
+  }
+
   return (
     <div
       className="pt-6 border-t-2 border-Secondary gap-x-8 grid lg:grid-cols-4"
@@ -21,20 +27,51 @@ const FrontPage = () => {
           of my work, and feel free to contact me with any questions.
         </p>
       </div>
-      <div className="hidden lg:inline relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md col-span-2">
-        <Image
-          src={FrontPageImage}
-          alt="FrontPageImage"
-          height={0}
-          width={0}
-          fill
-          sizes="(max-width: 768px) 100vw,
+      <div className="hidden lg:inline relative border-0 border-Border col-span-2">
+        <div className="relative w-full h-full flex justify-center items-center">
+          <Image
+            src={FrontPageImage}
+            alt="FrontPageImage"
+            height={400}
+            // width={0}
+            sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-          loading="eager"
-          priority
-          className="object-cover object-center"
-        />
+            loading="eager"
+            priority
+            className="object-cover object-center absolute z-10 grayscale mix-blend-multiply"
+          />
+          {tvOn ? (
+            <div className="absolute bg-Secondary text-Primary h-[285px] w-[400px] mr-28 mb-10">
+              <div className="flex flex-col h-full py-6 px-8">
+                <h1 className="text-xl pb-5">The Channel Guide</h1>
+                <div className="">
+                  <div className="grid gap-5 grid-cols-3">
+                    <div
+                      className="bg-Primary h-[85px] rounded cursor-pointer z-20"
+                      onClick={() => console.log("hello")}
+                    ></div>
+                    <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                    <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                  </div>
+                  <div className="grid gap-5 grid-cols-2 pt-5">
+                    <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                    <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="absolute bg-Secondary text-Primary h-[285px] w-[400px] mr-28 mb-10"></div>
+          )}
+          <button
+            className={`z-20 absolute ml-[372px] mt-1 h-[10px] w-[10px] rounded-full ${
+              tvOn ? "bg-Green" : "bg-Tertiary"
+            }
+              `}
+            onClick={() => toggleTv()}
+          />
+        </div>
       </div>
     </div>
   );
@@ -43,6 +80,24 @@ const FrontPage = () => {
 export default FrontPage;
 
 /*
+
+  Tetris Website faller or just an image broken into blocks (could be image of me or something)
+  Do tetris with your photo (try to cartoonize it even more or midjourney cartoonize it)
+
+
+
+  Maybe put a button over part of the tv (green when on and red when off - clicks to turn on and off)
+
+  TV Structure
+
+
+  Show structure 
+  - Img
+  - Bottom left
+    - Title
+
+
+
   Can make a headline component
   Can also make a component for the first letter of the text so that it can be styled differently on left
 

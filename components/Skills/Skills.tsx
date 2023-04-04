@@ -2,6 +2,7 @@ import React from "react";
 import Crossword from "./Crossword/Crossword";
 import Instructions from "./Instructions/Instructions";
 import JobWanted from "./JobWanted/JobWanted";
+import Tv from "./Tv/Tv";
 
 const Skills = () => {
   return (
@@ -10,6 +11,7 @@ const Skills = () => {
       id="skills"
     >
       <JobWanted />
+      {/* <Tv /> */}
       <div className="grid grid-cols-1 col-span-3">
         {/* <Instructions /> */}
         <Crossword />

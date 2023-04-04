@@ -87,6 +87,7 @@ module.exports = {
         Tertiary: "#cf5d52",
         Border: "rgba(26, 28, 26, 0.9)",
         Black: "#1d1d1b",
+        Green: "#4CAF50",
       },
     },
   },
