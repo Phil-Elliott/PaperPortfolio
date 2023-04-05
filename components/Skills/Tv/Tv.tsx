@@ -143,26 +143,15 @@ const Tv = () => {
           onClick={() => changeChannel("down")}
         />
       </div>
-      <h3 className="text-lg xs:text-xl text-Tertiary font-bold">
+      <h3 className="shadow-lg rounded p-2 border-y-2 border-Secondary text-lg xs:text-lg text-Primary bg-Secondary font-bold">
         <button
-          className={`mr-5 animate-pulse z-20 h-[10px] w-[10px] rounded-full bg-Tertiary`}
+          className={`mr-3 animate-pulse z-20 h-[10px] w-[10px] rounded-full bg-Tertiary`}
         />
-        Push the buttons
+        Buttons / Top - Power / Middle - Channel Up / Bottom - Channel Down
         <button
-          className={`ml-5 animate-pulse z-20 h-[10px] w-[10px] rounded-full bg-Green`}
+          className={`ml-3 animate-pulse z-20 h-[10px] w-[10px] rounded-full bg-Green`}
         />
       </h3>
-
-      {/* <div className="flex flex-col px-2 font-bold border-Secondary border-2 h-2/3 w-1/4 bg-Secondary text-Primary shadow-lg rounded">
-        <p className="pt-4 pb-2 mx-auto font-bold text-xl">TV Guide</p>
-        <p className="">1 - PM APP</p>
-        <p>2 - News App</p>
-        <p>3 - Blog</p>
-        <p>4 - Coming Soon</p>
-        <p>5 - Coming Soon</p>
-        <p>6 - Coming Soon</p>
-        <p>Use bttns</p>
-      </div> */}
     </div>
   );
 };

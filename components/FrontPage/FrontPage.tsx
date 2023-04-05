@@ -22,7 +22,12 @@ const FrontPage = () => {
         </p>
       </div>
       <div className="hidden lg:inline relative border-0 border-Border col-span-2 grayscale mix-blend-multiply">
-        <Image src={FrontPageImage} alt="Web Development" fill />
+        <Image
+          src={FrontPageImage}
+          alt="Web Development"
+          fill
+          className="object-cover object-center z-10"
+        />
       </div>
     </div>
   );

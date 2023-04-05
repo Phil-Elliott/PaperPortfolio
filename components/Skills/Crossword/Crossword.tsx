@@ -281,7 +281,7 @@ const CrosswordPuzzle = () => {
           })}
         </div>
 
-        <div className="md:pl-6 pt-10 md:pt-0 font-bold lg3:border-l-2 border-Secondary lg3:ml-6">
+        <div className="md:pl-0 pt-10 md:pt-0 font-bold lg3:border-l-0 border-Secondary lg3:ml-6">
           <div className="text-xl pb-0 text-Tertiary h-full flex flex-col justify-between">
             <p className="text-Secondary pb-6 text-xl font-serif leading-relaxed">
               {currentWord.num === 0
