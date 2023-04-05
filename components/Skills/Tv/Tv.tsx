@@ -13,9 +13,8 @@ const Channels: { [key: number]: StaticImageData } = {
   1: TvStatic,
   2: Board3,
   3: Board,
-  4: Board2,
-  5: TvStatic,
-  6: Board4,
+  4: TvStatic,
+  5: Board2,
 };
 
 const Tv = () => {
@@ -52,12 +51,12 @@ const Tv = () => {
   function changeChannel(direction: string) {
     if (direction === "down") {
       if (channelNumber === 1) {
-        setChannelNumber(6);
+        setChannelNumber(5);
       } else {
         setChannelNumber(channelNumber - 1);
       }
     } else if (direction === "up") {
-      if (channelNumber === 6) {
+      if (channelNumber === 5) {
         setChannelNumber(1);
       } else {
         setChannelNumber(channelNumber + 1);
@@ -144,7 +143,7 @@ const Tv = () => {
           onClick={() => changeChannel("down")}
         />
       </div>
-      <h3 className="text-lg xs:text-xl text-Tertiary font-black">
+      <h3 className="text-lg xs:text-xl text-Tertiary font-bold">
         <button
           className={`mr-5 animate-pulse z-20 h-[10px] w-[10px] rounded-full bg-Tertiary`}
         />
