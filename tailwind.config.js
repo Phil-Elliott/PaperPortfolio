@@ -9,6 +9,7 @@ module.exports = {
       sans: ["Spectral", "sans-serif"],
       serif: ["Spectral", "serif"],
       mono: ["Menlo", "monospace"],
+      pixel: ["Rubik Pixels"],
     },
 
     screens: {
@@ -78,6 +79,15 @@ module.exports = {
     },
 
     extend: {
+      animation: {
+        static: "static 1s ease-in-out infinite",
+      },
+      keyframes: {
+        static: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-.25rem)" },
+        },
+      },
       colors: {
         Background: "#181818",
         Primary: "#efefef",
