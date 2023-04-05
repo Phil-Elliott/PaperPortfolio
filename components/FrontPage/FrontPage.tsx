@@ -1,69 +1,8 @@
 import React, { useState } from "react";
-import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
-import FrontPageImage from "../../assets/images/tv.png";
-import TvStatic from "../../assets/images/TvStatic.gif";
-import Code from "../../assets/images/code.jpg";
-
-const Channels: { [key: number]: StaticImageData } = {
-  1: TvStatic,
-  2: Code,
-  3: TvStatic,
-  4: Code,
-  5: TvStatic,
-  6: Code,
-  7: TvStatic,
-  8: Code,
-  9: TvStatic,
-};
+import Image from "next/image";
+import FrontPageImage from "../../assets/images/web-dev.jpg";
 
 const FrontPage = () => {
-  const [tvOn, setTvOn] = useState(false);
-  const [tvChannel, setTvChannel] = useState(false);
-  const [channelNumber, setChannelNumber] = useState<number>(3);
-  const [boxVariants, setBoxVariants] = useState<any>({
-    initial: {
-      scaleX: 0,
-      scaleY: 0,
-    },
-    animate: {
-      scaleX: [0, 4, 39, 39],
-      scaleY: [0, 0.5, 0.5, 30],
-    },
-    transition: {
-      duration: 2,
-    },
-  });
-
-  // used to turn the tv on and off
-  function toggleTv() {
-    if (tvOn === false) {
-      setTimeout(() => {
-        setTvChannel(true);
-      }, 1000);
-    } else {
-      setTvChannel(false);
-    }
-    setTvOn(!tvOn);
-  }
-
-  // used to change the channel
-  function changeChannel(direction: string) {
-    if (direction === "down") {
-      if (channelNumber === 1) {
-        setChannelNumber(9);
-      } else {
-        setChannelNumber(channelNumber - 1);
-      }
-    } else if (direction === "up") {
-      if (channelNumber === 9) {
-        setChannelNumber(1);
-      } else {
-        setChannelNumber(channelNumber + 1);
-      }
-    }
-  }
-
   return (
     <div
       className="pt-6 border-t-2 border-Secondary gap-x-8 grid lg:grid-cols-4"
@@ -82,74 +21,8 @@ const FrontPage = () => {
           of my work, and feel free to contact me with any questions.
         </p>
       </div>
-      <div className="hidden lg:inline relative border-0 border-Border col-span-2">
-        <div className="relative w-full h-full flex justify-center items-center mix-blend-multiply">
-          <Image
-            src={FrontPageImage}
-            alt="FrontPageImage"
-            height={400}
-            // width={0}
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-            loading="eager"
-            priority
-            className="object-cover object-center absolute z-10 grayscale"
-          />
-          {tvOn ? (
-            <div
-              className={`absolute ${
-                tvChannel ? "bg-Primary" : "bg-Secondary"
-              } flex items-center justify-center text-Primary h-[286px] w-[377px] mr-28 mb-11 rounded`}
-            >
-              {!tvChannel ? (
-                <motion.div
-                  transition={{ duration: 1 }}
-                  initial="initial"
-                  animate="animate"
-                  variants={boxVariants}
-                  className="bg-Primary h-[10px] w-[10px] rounded-[1px]"
-                ></motion.div>
-              ) : (
-                <div className="grayscale">
-                  <Image
-                    src={Channels[channelNumber]}
-                    alt="TvStatic"
-                    height={275}
-                    width={372}
-                    className="z-0 w-full h-[285px]"
-                  />
-                  <p className="absolute font-bold font-pixel text-Primary text-3xl ml-[330px] mt-[-260px] z-10">
-                    {channelNumber}
-                  </p>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="bg-Secondary h-[295px] w-[400px] mr-28 mb-14"></div>
-          )}
-          <button
-            className={`animate-pulse z-20 absolute ml-[372px] mt-1 h-[10px] w-[10px] rounded-full ${
-              tvOn ? "bg-Green" : "bg-Tertiary"
-            }
-              `}
-            onClick={() => toggleTv()}
-          />
-          <button
-            className={`animate-pulse z-20 absolute ml-[372px] mt-[54px] h-[10px] w-[10px] rounded-full ${
-              tvOn ? "bg-Green" : "bg-Tertiary"
-            }
-              `}
-            onClick={() => changeChannel("up")}
-          />
-          <button
-            className={`animate-pulse z-20 absolute ml-[372px] mt-[104px] h-[10px] w-[10px] rounded-full ${
-              tvOn ? "bg-Green" : "bg-Tertiary"
-            }
-              `}
-            onClick={() => changeChannel("down")}
-          />
-        </div>
+      <div className="hidden lg:inline relative border-0 border-Border col-span-2 grayscale mix-blend-multiply">
+        <Image src={FrontPageImage} alt="Web Development" fill />
       </div>
     </div>
   );
@@ -158,9 +31,16 @@ const FrontPage = () => {
 export default FrontPage;
 
 /*
+  Move tv component
+  Size it correctly
+  Make it responsive
+  Maybe make a channel list with directions
+  Make less channels
+  Have 3 gifs (one for each project)
+  Work on adding pong game
 
-  1) Make move channel back button or add to change channel function
-  2) Make the gifs for the projects  
+
+
 
 
 
