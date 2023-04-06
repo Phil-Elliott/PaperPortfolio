@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import FrontPageImage from "../../assets/images/web-dev.jpg";
 
@@ -8,7 +8,7 @@ const FrontPage = () => {
       className="pt-6 border-t-2 border-Secondary gap-x-8 grid lg:grid-cols-4"
       id="front"
     >
-      <div className="lg:border-r-2 border-Border lg:pr-8 col-span-2">
+      <div className="lg:border-r-2 border-Border lg:pr-8 col-span-2 ">
         <h1 className="article-header lg:text-5xl text-fluid-9xl leading-normal lg:leading-normal">
           Aspiring Frontend Developer Seeking First Dev Role
         </h1>
@@ -21,19 +21,12 @@ const FrontPage = () => {
           of my work, and feel free to contact me with any questions.
         </p>
       </div>
-      <div className="hidden lg:inline relative grayscale mix-blend-multiply border-2 border-Border rounded shadow-md col-span-2">
+      <div className="hidden lg:inline relative border-0 border-Border col-span-2 grayscale mix-blend-multiply">
         <Image
           src={FrontPageImage}
-          alt="FrontPageImage"
-          height={0}
-          width={0}
+          alt="Web Development"
           fill
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-          loading="eager"
-          priority
-          className="object-cover object-center"
+          className="object-cover object-center z-10"
         />
       </div>
     </div>
@@ -43,12 +36,61 @@ const FrontPage = () => {
 export default FrontPage;
 
 /*
-  Can make a headline component
-  Can also make a component for the first letter of the text so that it can be styled differently on left
+  Move tv component
+  Size it correctly
+  Make it responsive
+  Maybe make a channel list with directions
+  Make less channels
+  Have 3 gifs (one for each project)
+  Work on adding pong game
+
+
+
+
+
+
+
+  Have a channel guide and instruction or a remote for the tv or a short sentence below the tv
+
+
+
+  Tetris Website faller or just an image broken into blocks (could be image of me or something)
+  Do tetris with your photo (try to cartoonize it even more or midjourney cartoonize it)
 
 
    Cartoonize your image here (you in front of a computer)
      https://www.befunky.com/create/photo-to-cartoon/
+
+
+
+     // <div
+                //   className={`bg-Secondary flex flex-col w-full h-full py-6 px-8 transition-all duration-1000 ease-in-out`}
+                // >
+                //   <h1 className="text-xl pb-5">The Channel Guide</h1>
+                //   <div className="">
+                //     <div className="grid gap-5 grid-cols-3">
+                //       <div
+                //         className="bg-Primary h-[85px] rounded cursor-pointer z-20"
+                //         onClick={() => console.log("hello")}
+                //       ></div>
+                //       <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                //       <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                //     </div>
+                //     <div className="grid gap-5 grid-cols-2 pt-5">
+                //       <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                //       <div className="bg-Primary h-[85px] rounded cursor-pointer z-20"></div>
+                //     </div>
+                //   </div>
+                // </div>
+
+
+                   <Image
+              src={TvStatic}
+              alt="TvStatic"
+              height={275}
+              width={372}
+              className="mr-28 mb-12 z-0 rounded"
+            /> 
 */
 
 /*

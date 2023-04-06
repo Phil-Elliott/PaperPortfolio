@@ -9,11 +9,13 @@ module.exports = {
       sans: ["Spectral", "sans-serif"],
       serif: ["Spectral", "serif"],
       mono: ["Menlo", "monospace"],
+      pixel: ["Rubik Pixels"],
     },
 
     screens: {
       xs: "480px",
       sm: "600px",
+      sm2: "640px",
       md: "760px",
       lg: "984px",
       lg2: "1100px",
@@ -78,6 +80,15 @@ module.exports = {
     },
 
     extend: {
+      animation: {
+        static: "static 1s ease-in-out infinite",
+      },
+      keyframes: {
+        static: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-.25rem)" },
+        },
+      },
       colors: {
         Background: "#181818",
         Primary: "#efefef",
@@ -87,6 +98,7 @@ module.exports = {
         Tertiary: "#cf5d52",
         Border: "rgba(26, 28, 26, 0.9)",
         Black: "#1d1d1b",
+        Green: "#4CAF50",
       },
     },
   },
