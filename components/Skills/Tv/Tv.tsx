@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import TvImage from "../../../assets/images/tv.png";
 import TvStatic from "../../../assets/images/TvStatic.gif";
-import PMApp from "../../../assets/images/PM2-Vid.gif";
+import PMApp from "../../../assets/images/PM5-Vid.gif";
 import News from "../../../assets/images/News5-Vid.gif";
-import Blog from "../../../assets/images/Blog1-Vid.gif";
+import Blog from "../../../assets/images/Blog8-Vid.gif";
 
 const Channels: { [key: number]: StaticImageData } = {
   1: TvStatic,
