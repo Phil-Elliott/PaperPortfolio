@@ -76,7 +76,7 @@ const Tv = () => {
         />
         {tvOn ? (
           <div
-            className={`absolute bg-Secondary flex items-center justify-center text-Primary w-[210px] ml-12 pt-5 sm2:pt-0 sm2:h-[286px] sm2:w-[377px] sm2:ml-0 mr-28 mb-11 rounded`}
+            className={`absolute bg-Secondary flex items-center justify-center text-Primary w-[220px] h-[186px] ml-12 pt-4 sm2:pt-0 sm2:h-[286px] sm2:w-[387px] sm2:ml-0 mr-28 mb-11 rounded`}
 
             // className={`absolute bg-Secondary flex items-center justify-center text-Primary w-[210px] ml-14 pt-5 sm2:pt-0 sm2:h-[286px] sm2:w-[497px] sm2:ml-32 mr-28 mb-11 rounded`}
           >
@@ -86,7 +86,7 @@ const Tv = () => {
                 initial="initial"
                 animate="animate"
                 variants={boxVariants}
-                className="bg-Primary h-[10px] w-[10px] rounded-[1px]"
+                className="bg-Primary h-[6px] w-[6px] sm2:h-[10px] sm2:w-[10px] rounded-[1px]"
               >
                 <Image
                   src={TvStatic}
@@ -103,7 +103,7 @@ const Tv = () => {
                   alt="Project video"
                   height={275}
                   width={372}
-                  className={`z-0 w-full h-[170px] sm2:h-[275px] ${
+                  className={`z-0 w-auto h-[170px] sm2:h-[275px] ${
                     Channels[channelNumber] !== TvStatic && "px-1 py-0"
                   }`}
                 />
