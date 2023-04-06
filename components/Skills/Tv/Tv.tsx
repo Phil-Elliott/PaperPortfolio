@@ -3,18 +3,16 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import TvImage from "../../../assets/images/tv.png";
 import TvStatic from "../../../assets/images/TvStatic.gif";
-import Code from "../../assets/images/code.jpg";
-import Board from "../../../assets/images/Board.gif";
-import Board2 from "../../../assets/images/Board2.gif";
-import Board3 from "../../../assets/images/Board3.gif";
-import Board4 from "../../../assets/images/Board6.gif";
+import PM from "../../../assets/images/PM-Vid.gif";
+import News from "../../../assets/images/News-Vid.gif";
+import Blog from "../../../assets/images/Blog-Vid.gif";
 
 const Channels: { [key: number]: StaticImageData } = {
   1: TvStatic,
-  2: Board3,
-  3: Board,
+  2: Blog,
+  3: PM,
   4: TvStatic,
-  5: Board2,
+  5: News,
 };
 
 const Tv = () => {
@@ -66,24 +64,21 @@ const Tv = () => {
 
   return (
     <div className="relative flex flex-col justify-center items-center border-b-2 lg3:border-b-0 leading-loose lg3:border-r-2 border-Secondary lg3:pr-6 col-span-2 pb-6 lg3:pb-0">
-      <div className="relative w-full h-[400px] lg3:h-full flex justify-center items-center mix-blend-multiply">
+      <div className="relative w-full h-[300px] sm2:h-[400px] lg3:h-full flex justify-center items-center mix-blend-multiply">
         <Image
           src={TvImage}
           alt="FrontPageImage"
           height={400}
           // width={500}
-          sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
           loading="eager"
           priority
-          className="object-cover object-center absolute z-10 grayscale"
+          className=" z-10 grayscale h-[250px] w-[320px] sm2:h-[400px] sm2:w-[575px]"
         />
         {tvOn ? (
           <div
-            className={`absolute ${
-              tvChannel ? "bg-Primary" : "bg-Secondary"
-            } flex items-center justify-center text-Primary h-[286px] w-[377px] mr-28 mb-11 rounded`}
+            className={`absolute bg-Secondary flex items-center justify-center text-Primary w-[210px] ml-12 pt-5 sm2:pt-0 sm2:h-[286px] sm2:w-[377px] sm2:ml-0 mr-28 mb-11 rounded`}
+
+            // className={`absolute bg-Secondary flex items-center justify-center text-Primary w-[210px] ml-14 pt-5 sm2:pt-0 sm2:h-[286px] sm2:w-[497px] sm2:ml-32 mr-28 mb-11 rounded`}
           >
             {!tvChannel ? (
               <motion.div
@@ -102,48 +97,48 @@ const Tv = () => {
                 />
               </motion.div>
             ) : (
-              <div className="grayscale">
+              <div className="grayscale bg-Secondary">
                 <Image
                   src={Channels[channelNumber]}
-                  alt="TvStatic"
+                  alt="Project video"
                   height={275}
                   width={372}
-                  className={`z-0 w-full h-[285px] bg-Secondary ${
+                  className={`z-0 w-full h-[170px] sm2:h-[275px] ${
                     Channels[channelNumber] !== TvStatic && "px-1 py-0"
                   }`}
                 />
-                <p className="absolute font-bold font-pixel text-Primary text-3xl ml-[330px] mt-[-260px] z-30">
+                <p className="absolute font-bold font-pixel text-Primary text-2xl sm2:text-3xl ml-[180px] sm2:ml-[330px] mt-[-165px] sm2:mt-[-260px] z-30">
                   {channelNumber}
                 </p>
               </div>
             )}
           </div>
         ) : (
-          <div className="bg-Secondary h-[295px] w-[400px] mr-28 mb-14"></div>
+          <div className="bg-Secondary h-[195px] w-[220px]  sm2:h-[295px] sm2:w-[400px] mr-14 mb-10 sm2:mr-28 sm2:mb-14 absolute"></div>
         )}
         <button
-          className={`animate-pulse z-20 absolute ml-[372px] mt-1 h-[10px] w-[10px] rounded-full ${
+          className={`animate-pulse z-20 absolute ml-[209px] sm2:ml-[372px] mt-1 h-[5px] w-[5px] sm2:h-[10px] sm2:w-[10px] rounded-full ${
             tvOn ? "bg-Green" : "bg-Tertiary"
           }
               `}
           onClick={() => toggleTv()}
         />
         <button
-          className={`animate-pulse z-20 absolute ml-[372px] mt-[54px] h-[10px] w-[10px] rounded-full ${
+          className={`animate-pulse z-20 absolute ml-[209px] sm2:ml-[372px] mt-[34px] sm2:mt-[54px] h-[5px] w-[5px] sm2:h-[10px] sm2:w-[10px] rounded-full ${
             tvOn ? "bg-Green" : "bg-Tertiary"
           }
               `}
           onClick={() => changeChannel("up")}
         />
         <button
-          className={`animate-pulse z-20 absolute ml-[372px] mt-[104px] h-[10px] w-[10px] rounded-full ${
+          className={`animate-pulse z-20 absolute ml-[209px] sm2:ml-[372px] mt-[64px] sm2:mt-[104px] h-[5px] w-[5px] sm2:h-[10px] sm2:w-[10px] rounded-full ${
             tvOn ? "bg-Green" : "bg-Tertiary"
           }
               `}
           onClick={() => changeChannel("down")}
         />
       </div>
-      <h3 className="shadow-lg rounded p-2 border-y-2 border-Secondary text-lg xs:text-lg text-Primary bg-Secondary font-bold">
+      <h3 className="leading-relaxed shadow-lg rounded p-2 border-y-2 border-Secondary text-sm xs:text-base text-Primary bg-Secondary font-bold">
         <button
           className={`mr-3 animate-pulse z-20 h-[10px] w-[10px] rounded-full bg-Tertiary`}
         />
@@ -157,3 +152,14 @@ const Tv = () => {
 };
 
 export default Tv;
+
+/*
+
+Could widen the width of the tv screen to render a better image for the site
+
+
+            className={`absolute bg-Secondary flex items-center justify-center text-Primary w-[210px] ml-14 pt-5 sm2:pt-0 sm2:h-[286px] sm2:w-[377px] sm2:ml-0 mr-28 mb-11 rounded`}
+
+
+
+*/
