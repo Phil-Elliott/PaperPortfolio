@@ -10,6 +10,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "News";
+  src: url("../public/fonts/RobinsonPress.otf");
+}
+
 @layer components {
   .article-text {
     @apply first-letter:bg-Secondary first-letter:text-Primary first-letter:p-3 first-letter:rounded first-letter:float-left first-letter:mt-2 first-letter:mr-4 first-letter:text-4xl first-letter:font-bold text-xl leading-loose;

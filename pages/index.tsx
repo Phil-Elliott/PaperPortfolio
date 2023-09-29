@@ -87,8 +87,18 @@ export default function Home() {
 }
 
 /*
-2) Add google analytics 
-3) Add larger black background
+
+1) Get testing on app
+2) Test the tv app
+3) Start learning about streaming
+
+
+
+
+1) Add pong game to the tv
+2) Add landing page for PM App
+3) 
+
 
 
 

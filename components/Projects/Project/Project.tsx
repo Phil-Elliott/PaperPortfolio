@@ -30,7 +30,7 @@ const Project = ({
           return (
             <h1
               key={index}
-              className="uppercase inline-flex text-fluid-7xl font-bold mb-4 px-2 pt-1 bg-Secondary text-Primary rounded-sm mr-2"
+              className="uppercase inline-flex text-fluid-07xl font-bold mb-4 px-2 pt-1 bg-Secondary text-Primary rounded-sm mr-2"
             >
               {word}
             </h1>
@@ -38,7 +38,7 @@ const Project = ({
         })}
       </div>
       <p className="article-text mt-6">{description}</p>
-      {title[0] === "Simple" && (
+      {(title[0] === "Simple" || title[0] === "Retro") && (
         <p className="mt-6 text-xl leading-loose">
           <strong>Demo Account </strong>/ Email: user@gmail.com / Password:
           user1234

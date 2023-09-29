@@ -1,8 +1,9 @@
 import React from "react";
-import ProjectImage1 from "../../assets/images/PM-Dashboard.png";
-import ProjectImage2 from "../../assets/images/News-Home.png";
-import ProjectImage3 from "../../assets/images/BlogHome.png";
+import ProjectImage1 from "../../assets/images/PM-Dashboard.jpg";
+import ProjectImage2 from "../../assets/images/News-Home.jpg";
+import ProjectImage3 from "../../assets/images/BlogHome.jpg";
 import ProjectImage4 from "../../assets/images/code.jpg";
+import ProjectImage5 from "../../assets/images/ecommerce.jpg";
 import Project from "./Project/Project";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -16,10 +17,11 @@ const ProjectsInfo = [
     link: "https://timely-lollipop-f90b7b.netlify.app/",
   },
   {
-    name: "Personal Blog",
-    description: "A blog built with Next.js and Sanity.io",
-    image: ProjectImage3,
-    link: "https://www.philelliottblog.com/",
+    name: "Ecommerce Website",
+    description:
+      "A versatile e-commerce platform offering secure transactions.",
+    image: ProjectImage5,
+    link: "https://ecommerce-seven-opal-44.vercel.app/",
   },
   {
     name: "News Website",
@@ -29,11 +31,10 @@ const ProjectsInfo = [
     link: "https://pedantic-bhabha-23f3dd.netlify.app/",
   },
   {
-    name: "Coming Soon",
-    description:
-      "The best is yet to come! Check back soon for my latest web development projects.",
-    image: ProjectImage4,
-    link: "https://github.com/Phil-Elliott/PaperPortfolio",
+    name: "Personal Blog",
+    description: "A blog built with Next.js and Sanity.io",
+    image: ProjectImage3,
+    link: "https://www.philelliottblog.com/",
   },
 ];
 

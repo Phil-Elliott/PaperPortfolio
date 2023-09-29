@@ -63,7 +63,7 @@ const Tv = () => {
   }
 
   return (
-    <div className="relative flex flex-col justify-center items-center border-b-2 lg3:border-b-0 leading-loose lg3:border-r-2 border-Secondary lg3:pr-6 col-span-2 pb-6 lg3:pb-0">
+    <div className="relative flex flex-col justify-center items-center border-b-2 lg3:border-b-0 leading-loose lg3:border-r-2 border-Secondary lg3:pr-6 col-span-2 lg4:col-span-3 pb-6 lg3:pb-0">
       <div className="relative w-full h-[300px] sm2:h-[400px] lg3:h-full flex justify-center items-center mix-blend-multiply">
         <Image
           src={TvImage}

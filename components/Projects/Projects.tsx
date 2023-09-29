@@ -1,19 +1,48 @@
 import React from "react";
 import Project from "./Project/Project";
-import ProjectImage1 from "../../assets/images/PM-Dashboard.png";
-import ProjectImage2 from "../../assets/images/News-Home.png";
-import ProjectImage3 from "../../assets/images/BlogHome.png";
+import ProjectImage1 from "../../assets/images/PM-Dashboard.jpg";
+import ProjectImage2 from "../../assets/images/News-Home.jpg";
+import ProjectImage3 from "../../assets/images/BlogHome.jpg";
+import ProjectImage4 from "../../assets/images/ecommerce.jpg";
 import ProjectImage from "./Project/ProjectImage";
 
 const projectData = [
   {
-    title: ["Simple", "Plan"],
+    title: ["Project", "Mgmt", "App"],
     description:
-      "This is a React-based application designed for task tracking within a project. It enables users to create projects and tasks, as well as move tasks across various sections using drag-and-drop functionality. Each task includes key details such as its due date, description, a comments section, and the assigned members for streamlined collaboration.",
-    skills: ["React", "TypeScript", "SCSS", "Redux", "Strapi API"],
+      "A React-based application designed for task tracking within a project. It enables users to create projects and tasks, as well as move tasks across various sections using drag-and-drop functionality. Each task includes key details such as its due date, description, a comments section, and the assigned members for streamlined collaboration.",
+    skills: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Node",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "SCSS",
+    ],
     demo: "https://timely-lollipop-f90b7b.netlify.app/",
     code: "https://github.com/Phil-Elliott/Project_Management-App",
     images: [ProjectImage1, ProjectImage1, ProjectImage1, ProjectImage1],
+  },
+  {
+    title: ["Ecommerce", "Website"],
+    description:
+      "This E-Commerce app offers a secure, user-friendly shopping experience, enabling swift product exploration, review, and purchase through integrated Stripe payments. It emphasizes seamless navigation and community engagement via a robust review system.",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Node",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "Stripe API",
+      "Tailwind CSS",
+    ],
+    demo: "https://ecommerce-seven-opal-44.vercel.app/",
+    code: "https://github.com/Phil-Elliott/ecommerce",
+    images: [ProjectImage4, ProjectImage4, ProjectImage4, ProjectImage4],
   },
   {
     title: ["Personal", "Blog"],
