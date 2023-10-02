@@ -7,7 +7,7 @@ const Channels: Record<number, string> = {
   1: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696214026/Portfolio/TVStatic_qel4mt.mp4",
   2: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215428/Portfolio/PMVid_e4stud.mp4",
   3: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215502/Portfolio/BlogVid_hkrkk8.mp4",
-  4: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696214026/Portfolio/TVStatic_qel4mt.mp4",
+  4: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696236648/Portfolio/EcomVid_ablsax.mp4",
   5: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215357/Portfolio/NewsVid_yrnjt1.mp4",
 };
 
@@ -90,7 +90,7 @@ const Tv = () => {
                   src={Channels[channelNumber]}
                   // alt="Project video"
                   className={` z-0 w-auto h-[170px] sm2:h-[275px] object-fill
-                  ${channelNumber !== 1 && channelNumber !== 4 && "px-0 py-0"}`}
+                  ${channelNumber !== 1 && "px-0 py-0"}`}
                   loop
                   autoPlay
                 />
