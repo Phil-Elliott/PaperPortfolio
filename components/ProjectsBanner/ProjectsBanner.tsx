@@ -14,7 +14,7 @@ const ProjectsInfo = [
     description:
       "This is a project management app that is inspired by Trello's interface and functionality.",
     image: ProjectImage1,
-    link: "https://timely-lollipop-f90b7b.netlify.app/",
+    link: "https://timely-lollipop-f90b7b.netlify.app/signIn",
   },
   {
     name: "Ecommerce Website",

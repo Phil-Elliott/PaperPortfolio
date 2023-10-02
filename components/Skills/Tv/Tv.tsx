@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import TvImage from "../../../assets/images/tv.png";
-import TvStatic from "../../../assets/images/TvStatic.gif";
-import PMApp from "../../../assets/images/PM5-Vid.gif";
-import News from "../../../assets/images/News5-Vid.gif";
-import Blog from "../../../assets/images/Blog8-Vid.gif";
 
-const Channels: { [key: number]: StaticImageData } = {
-  1: TvStatic,
-  2: Blog,
-  3: PMApp,
-  4: TvStatic,
-  5: News,
+const Channels: Record<number, string> = {
+  1: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696214026/Portfolio/TVStatic_qel4mt.mp4",
+  2: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215428/Portfolio/PMVid_e4stud.mp4",
+  3: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215502/Portfolio/BlogVid_hkrkk8.mp4",
+  4: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696214026/Portfolio/TVStatic_qel4mt.mp4",
+  5: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215357/Portfolio/NewsVid_yrnjt1.mp4",
 };
 
 const Tv = () => {
@@ -47,19 +43,9 @@ const Tv = () => {
 
   // used to change the channel
   function changeChannel(direction: string) {
-    if (direction === "down") {
-      if (channelNumber === 1) {
-        setChannelNumber(5);
-      } else {
-        setChannelNumber(channelNumber - 1);
-      }
-    } else if (direction === "up") {
-      if (channelNumber === 5) {
-        setChannelNumber(1);
-      } else {
-        setChannelNumber(channelNumber + 1);
-      }
-    }
+    setChannelNumber((prev) =>
+      direction === "up" ? (prev % 5) + 1 : ((prev - 2 + 5) % 5) + 1
+    );
   }
 
   return (
@@ -86,26 +72,27 @@ const Tv = () => {
                 initial="initial"
                 animate="animate"
                 variants={boxVariants}
-                className="bg-Primary h-[6px] w-[6px] sm2:h-[10px] sm2:w-[10px] rounded-[1px]"
+                className="bg-Secondary h-[6px] w-[6px] sm2:h-[10px] sm2:w-[10px] rounded-[1px]"
               >
-                <Image
-                  src={TvStatic}
-                  alt="TvStatic"
+                <video
+                  src="https://res.cloudinary.com/djdxd5akb/video/upload/v1696214026/Portfolio/TVStatic_qel4mt.mp4"
+                  // alt="TV Static"
                   height={275}
                   width={372}
-                  className="h-full w-full"
+                  className="h-full w-full object-cover"
+                  loop
+                  autoPlay
                 />
               </motion.div>
             ) : (
               <div className="grayscale bg-Secondary">
-                <Image
+                <video
                   src={Channels[channelNumber]}
-                  alt="Project video"
-                  height={275}
-                  width={372}
-                  className={`z-0 w-auto h-[170px] sm2:h-[275px] ${
-                    Channels[channelNumber] !== TvStatic && "px-1 py-0"
-                  }`}
+                  // alt="Project video"
+                  className={` z-0 w-auto h-[170px] sm2:h-[275px] object-fill
+                  ${channelNumber !== 1 && channelNumber !== 4 && "px-0 py-0"}`}
+                  loop
+                  autoPlay
                 />
                 <p className="absolute font-bold font-pixel text-Primary text-2xl sm2:text-3xl ml-[180px] sm2:ml-[330px] mt-[-165px] sm2:mt-[-260px] z-30">
                   {channelNumber}

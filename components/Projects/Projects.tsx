@@ -21,7 +21,7 @@ const projectData = [
       "Mongoose",
       "SCSS",
     ],
-    demo: "https://timely-lollipop-f90b7b.netlify.app/",
+    demo: "https://timely-lollipop-f90b7b.netlify.app/signIn",
     code: "https://github.com/Phil-Elliott/Project_Management-App",
     images: [ProjectImage1, ProjectImage1, ProjectImage1, ProjectImage1],
   },
