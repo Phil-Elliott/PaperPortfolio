@@ -8,7 +8,7 @@ import ProjectImage from "./Project/ProjectImage";
 
 const projectData = [
   {
-    title: ["Project", "Mgmt", "App"],
+    title: ["Simple", "Plan"],
     description:
       "A React-based application designed for task tracking within a project. It enables users to create projects and tasks, as well as move tasks across various sections using drag-and-drop functionality. Each task includes key details such as its due date, description, a comments section, and the assigned members for streamlined collaboration.",
     skills: [
@@ -26,7 +26,7 @@ const projectData = [
     images: [ProjectImage1, ProjectImage1, ProjectImage1, ProjectImage1],
   },
   {
-    title: ["Ecommerce", "Website"],
+    title: ["Retro", "Games"],
     description:
       "This E-Commerce app offers a secure, user-friendly shopping experience, enabling swift product exploration, review, and purchase through integrated Stripe payments. It emphasizes seamless navigation and community engagement via a robust review system.",
     skills: [
@@ -45,7 +45,7 @@ const projectData = [
     images: [ProjectImage4, ProjectImage4, ProjectImage4, ProjectImage4],
   },
   {
-    title: ["Personal", "Blog"],
+    title: ["Blog", "Website"],
     description:
       "A blog built with Next.js and Sanity.io. I enjoyed building this a lot, but I have not written too many articles. With a clean and minimalist design, my blog aims to deliver content in an easy-to-read format that is accessible to all. Thanks to the power of Next.js, users can navigate through the site with ease and enjoy a fast, seamless experience. On the backend, I use Sanity.io to manage and organize my content.",
     skills: ["Next.js", "SCSS", "Sanity API"],

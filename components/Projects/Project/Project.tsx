@@ -30,7 +30,7 @@ const Project = ({
           return (
             <h1
               key={index}
-              className="uppercase inline-flex text-fluid-07xl font-bold mb-4 px-2 pt-1 bg-Secondary text-Primary rounded-sm mr-2"
+              className="uppercase inline-flex text-fluid-7xl font-bold mb-4 px-2 pt-1 bg-Secondary text-Primary rounded-sm mr-2"
             >
               {word}
             </h1>

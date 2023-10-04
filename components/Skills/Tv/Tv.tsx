@@ -5,7 +5,7 @@ import TvImage from "../../../assets/images/tv.png";
 
 const Channels: Record<number, string> = {
   1: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696214026/Portfolio/TVStatic_qel4mt.mp4",
-  2: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215428/Portfolio/PMVid_e4stud.mp4",
+  2: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696309995/Portfolio/PMV_qgprgr.mp4",
   3: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215502/Portfolio/BlogVid_hkrkk8.mp4",
   4: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696236648/Portfolio/EcomVid_ablsax.mp4",
   5: "https://res.cloudinary.com/djdxd5akb/video/upload/v1696215357/Portfolio/NewsVid_yrnjt1.mp4",
