@@ -20,6 +20,7 @@ module.exports = {
       lg: "984px",
       lg2: "1100px",
       lg3: "1280px",
+      lg4: "1500px",
       xl: "1740px",
       "2xl": "1860px",
     },
@@ -72,6 +73,8 @@ module.exports = {
         "calc(4.768rem + (5.96 - 4.768) * ((100vw - 400px) / (1600 - 400)))",
         1,
       ],
+      "fluid-07xl": ["calc(4rem + 1.192 * ((100vw - 400px) / 1200))", 1],
+
       "fluid-8xl": [
         "calc(5.96rem + (8 - 5.96) * ((100vw - 400px) / (1600 - 400)))",
         1,
@@ -80,6 +83,9 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        paper: "url(../public/backgrounds/JPG/Paper_09.jpg)",
+      },
       animation: {
         static: "static 1s ease-in-out infinite",
       },

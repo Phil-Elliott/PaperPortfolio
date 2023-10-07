@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ParticleImages from "./ParticleImages/ParticleImages";
 
 type AttemptObject = {
   row: number;
@@ -20,12 +19,14 @@ const skills = [
   "CSS",
   "JavaScript",
   "React",
-  "Next.js",
+  "Next",
   "Redux",
   "SASS",
   "Tailwind",
-  // "PostgreSQL",
-  // "Jest",
+  "Node",
+  "Express",
+  "MongoDB",
+  "Mongoose",
 ];
 
 const CrosswordPuzzle = () => {
@@ -39,73 +40,100 @@ const CrosswordPuzzle = () => {
     num: 0,
   });
   const [stateDirection, setStateDirection] = useState<string>("");
+
   const data = {
     across: [
       {
-        clue: "What's the language that makes a website come alive?",
-        answer: "Javascript",
-        row: 3,
+        clue: "A web application framework for Node.js",
+        answer: "express",
+        row: 2,
         col: 0,
-        num: 4,
+        num: 3,
       },
       {
-        clue: "What do you call the building blocks of a website?",
-        answer: "Html",
-        row: 5,
-        col: 0,
-        num: 6,
-      },
-      {
-        clue: "A CSS preprocessor that helps you dress up a website",
-        answer: "Sass",
-        row: 5,
-        col: 5,
+        clue: "The scripting language that adds interactivity to web pages",
+        answer: "javascript",
+        row: 4,
+        col: 2,
         num: 7,
       },
-
       {
-        clue: "A JavaScript library that helps you keep a website's data in order.",
-        answer: "Redux",
-        row: 9,
-        col: 1,
+        clue: "The standard markup language for web pages",
+        answer: "html",
+        row: 6,
+        col: 2,
         num: 8,
+      },
+      {
+        clue: "A predictable state container for JavaScript apps",
+        answer: "redux",
+        row: 9,
+        col: 7,
+        num: 10,
+      },
+      {
+        clue: "A popular NoSQL database",
+        answer: "mongodb",
+        row: 10,
+        col: 0,
+        num: 11,
+      },
+      {
+        clue: "A JavaScript runtime built on Chrome's V8 engine",
+        answer: "node",
+        row: 13,
+        col: 1,
+        num: 12,
       },
     ],
     down: [
       {
-        clue: "What's the framework that makes building server-rendered React apps a breeze?",
-        answer: "Next",
+        clue: "A React framework for production-ready apps with server-side rendering",
+        answer: "next",
         row: 0,
-        col: 9,
+        col: 1,
         num: 1,
       },
       {
-        clue: "A JavaScript library that helps you build a website's personality.",
-        answer: "React",
-        row: 1,
-        col: 1,
+        clue: "The style sheet language used for describing the look of a web page",
+        answer: "CSS",
+        row: 0,
+        col: 5,
         num: 2,
       },
       {
-        clue: "A utility-first CSS framework that helps you create a website's unique look.",
-        answer: "Tailwind",
+        clue: "A popular JavaScript library for building user interfaces",
+        answer: "react",
         row: 2,
         col: 3,
-        num: 3,
+        num: 4,
       },
       {
-        clue: "What's the language that gives a website a makeover?",
-        answer: "Css",
-        row: 3,
-        col: 5,
+        clue: "A powerful CSS preprocessor",
+        answer: "sass",
+        row: 2,
+        col: 6,
         num: 5,
+      },
+      {
+        clue: "A utility-first CSS framework for modern web design",
+        answer: "tailwind",
+        row: 2,
+        col: 9,
+        num: 6,
+      },
+      {
+        clue: "An ODM library for MongoDB and Node.js",
+        answer: "mongoose",
+        row: 6,
+        col: 4,
+        num: 9,
       },
     ],
   };
 
-  // Creates the grid
-  const rows = 10;
-  const cols = 10;
+  const rows = 14;
+  const cols = 12;
   const grid = Array.from({ length: rows }, () =>
     Array.from({ length: cols }, () => "")
   );
@@ -125,9 +153,12 @@ const CrosswordPuzzle = () => {
   }
   for (let [key, word] of Object.entries(down)) {
     for (let i = 0; i < word.answer.length; i++) {
-      grid[word.row + i][word.col] = word.answer[i];
-      if (i === 0) {
-        numbers[word.row][word.col] = word.num;
+      // Check if the indices are within the bounds of the grid array
+      if (word.row + i < rows && word.col < cols) {
+        grid[word.row + i][word.col] = word.answer[i];
+        if (i === 0) {
+          numbers[word.row][word.col] = word.num;
+        }
       }
     }
   }
@@ -229,16 +260,20 @@ const CrosswordPuzzle = () => {
             return (
               <div
                 key={i}
-                className="bg-Secondary grid grid-cols-10 grid-rolls-10 z-9"
+                className="bg-Secondary grid z-9"
+                style={{
+                  gridTemplateColumns: "repeat(12, minmax(0, 1fr))",
+                  // gridTemplateRows: "repeat(15, minmax(0, 1fr))",
+                }}
               >
                 {row.map((cell, j) =>
                   cell !== "" ? (
                     <div
                       key={j}
-                      className="bg-Primary border-2 border-Secondary text-center uppercase font-black text-md z-5 relative"
+                      className="bg-Primary border-2 border-Secondary text-center uppercase font-black text-sm z-5 relative"
                     >
                       {numbers[i][j] !== 0 && (
-                        <span className="absolute text-Secondary text-sm p-1 font-black z-10">
+                        <span className="absolute text-Secondary opacity-75 text-sm p-0 font-black z-10 pointer-events-none">
                           {numbers[i][j]}
                         </span>
                       )}
@@ -246,7 +281,7 @@ const CrosswordPuzzle = () => {
                         aria-label="cell"
                         id={`cell-${i}-${j}`}
                         type="text"
-                        className="bg-Primary py-1 text-center uppercase font-black text-md z-8 w-full h-full focus:outline-none"
+                        className="bg-Primary py-1 text-center uppercase font-black z-8 w-full h-full focus:outline-none"
                         data-row={i}
                         data-col={j}
                         maxLength={1}
@@ -283,7 +318,7 @@ const CrosswordPuzzle = () => {
 
         <div className="md:pl-6 lg3:pl-0 pt-10 md:pt-0 font-bold lg3:border-l-0 border-Secondary lg3:ml-6">
           <div className="text-xl pb-0 text-Tertiary h-full flex flex-col justify-between">
-            <p className="text-Secondary pb-6 text-xl font-serif leading-relaxed">
+            <p className="text-Secondary pb-6 text-2xl font-serif leading-relaxed">
               {currentWord.num === 0
                 ? `${currentWord.clue}`
                 : `${currentWord.num}. ${currentWord.clue}`}
@@ -292,7 +327,7 @@ const CrosswordPuzzle = () => {
               <p className="pt-6 md:mt-0 mb-6 text-Secondary lg3:border-t-2 border-Secondary">
                 Skills Include:
               </p>
-              <ul className="list-disc list-inside flex flex-wrap gap-6 ">
+              <ul className="list-disc list-inside flex flex-wrap gap-5 text-xl ">
                 {skills.map((skill) => (
                   <li key={skill}>{skill}</li>
                 ))}
@@ -310,7 +345,7 @@ export default CrosswordPuzzle;
 /*
   leading-relaxed uppercase text-fluid-9xl xs:text-5xl article-header bg-Secondary text-center text-Primary font-serif py-4 tracking-widest px-4 mb-6 rounded-sm 
 
-
+https://crosswordlabs.com/
 
 
   

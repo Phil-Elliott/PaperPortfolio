@@ -1,22 +1,51 @@
 import React from "react";
 import Project from "./Project/Project";
-import ProjectImage1 from "../../assets/images/PM-Dashboard.png";
-import ProjectImage2 from "../../assets/images/News-Home.png";
-import ProjectImage3 from "../../assets/images/BlogHome.png";
+import ProjectImage1 from "../../assets/images/PM-Dashboard.jpg";
+import ProjectImage2 from "../../assets/images/News-Home.jpg";
+import ProjectImage3 from "../../assets/images/BlogHome.jpg";
+import ProjectImage4 from "../../assets/images/ecommerce.jpg";
 import ProjectImage from "./Project/ProjectImage";
 
 const projectData = [
   {
     title: ["Simple", "Plan"],
     description:
-      "This is a React-based application designed for task tracking within a project. It enables users to create projects and tasks, as well as move tasks across various sections using drag-and-drop functionality. Each task includes key details such as its due date, description, a comments section, and the assigned members for streamlined collaboration.",
-    skills: ["React", "TypeScript", "SCSS", "Redux", "Strapi API"],
-    demo: "https://timely-lollipop-f90b7b.netlify.app/",
+      "A React-based application designed for task tracking within a project. It enables users to create projects and tasks, as well as move tasks across various sections using drag-and-drop functionality. Each task includes key details such as its due date, description, a comments section, and the assigned members for streamlined collaboration.",
+    skills: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Node",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "SCSS",
+    ],
+    demo: "https://timely-lollipop-f90b7b.netlify.app/signIn",
     code: "https://github.com/Phil-Elliott/Project_Management-App",
     images: [ProjectImage1, ProjectImage1, ProjectImage1, ProjectImage1],
   },
   {
-    title: ["Personal", "Blog"],
+    title: ["Retro", "Games"],
+    description:
+      "This E-Commerce app offers a secure, user-friendly shopping experience, enabling swift product exploration, review, and purchase through integrated Stripe payments. It emphasizes seamless navigation and community engagement via a robust review system.",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Node",
+      "Express",
+      "MongoDB",
+      "Mongoose",
+      "Stripe API",
+      "Tailwind CSS",
+    ],
+    demo: "https://ecommerce-seven-opal-44.vercel.app/",
+    code: "https://github.com/Phil-Elliott/ecommerce",
+    images: [ProjectImage4, ProjectImage4, ProjectImage4, ProjectImage4],
+  },
+  {
+    title: ["Blog", "Website"],
     description:
       "A blog built with Next.js and Sanity.io. I enjoyed building this a lot, but I have not written too many articles. With a clean and minimalist design, my blog aims to deliver content in an easy-to-read format that is accessible to all. Thanks to the power of Next.js, users can navigate through the site with ease and enjoy a fast, seamless experience. On the backend, I use Sanity.io to manage and organize my content.",
     skills: ["Next.js", "SCSS", "Sanity API"],

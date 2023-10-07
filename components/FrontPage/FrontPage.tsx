@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import FrontPageImage from "../../assets/images/web-dev.jpg";
+import FrontPageImage from "../../assets/images/web-dev.jpeg";
 
 const FrontPage = () => {
   return (
@@ -13,10 +13,10 @@ const FrontPage = () => {
           Aspiring Frontend Developer Seeking First Dev Role
         </h1>
         <p className="article-text lg:text-justify">
-          Hello! I'm a frontend developer with expertise in HTML, CSS,
+          Hello! I'm a full stack developer with expertise in HTML, CSS,
           JavaScript, and React. I create visually appealing and user-friendly
           websites and continuously strive to improve my skills with the latest
-          technologies. I'm eager to join a dev team as a frontend developer and
+          technologies. I'm eager to join a dev team as a developer and
           contribute to exciting projects. Check out my portfolio for examples
           of my work, and feel free to contact me with any questions.
         </p>
@@ -27,7 +27,7 @@ const FrontPage = () => {
           alt="Web Development"
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover object-center z-10"
+          className="object-cover object-top z-10 rounded-sm"
         />
       </div>
     </div>

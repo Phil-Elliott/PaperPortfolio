@@ -38,7 +38,7 @@ const Project = ({
         })}
       </div>
       <p className="article-text mt-6">{description}</p>
-      {title[0] === "Simple" && (
+      {(title[0] === "Ecommerce" || title[0] === "Project") && (
         <p className="mt-6 text-xl leading-loose">
           <strong>Demo Account </strong>/ Email: user@gmail.com / Password:
           user1234
