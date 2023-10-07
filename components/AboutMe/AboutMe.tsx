@@ -17,7 +17,6 @@ const AboutMe = () => {
     {
       title: "Interests",
       description:
-        // "In my spare time, I enjoy exploring new places and immersing myself in different cultures through travel. I also find that getting out into nature and hiking helps me clear my mind and find inspiration. These activities help me stay energized and motivated in my pursuit of web development. I am also an avid reader, constantly seeking new knowledge and learning opportunities. Reading helps me relax and escape from the daily stresses of life, and also expands my understanding of the world around me.",
         "In my free time, I love traveling to new places and immersing myself in different cultures. Nature hikes are my go-to for clearing my mind and finding inspiration. I'm an avid reader who's always seeking new knowledge and learning opportunities.",
     },
     {
@@ -28,10 +27,6 @@ const AboutMe = () => {
     {
       title: "Programming",
       description:
-        // "Ever since I discovered my passion for programming, I have been excited to embark on a new journey as a web developer. With a desire to create dynamic, user-friendly websites and applications, I have been diligently working to acquire the skills and knowledge necessary to excel in this field. I am eager to put my skills to the test in a professional setting and as I continue to grow and learn, I am confident that my passion for web development will translate into a fulfilling and successful career.",
-        // "Ever since I discovered my passion for programming, I have been excited to embark on a new journey as a web developer. The thrill of creating dynamic, user-friendly websites and applications is what drives me. I take pride in continuously learning and improving my skills to bring my vision to life. The satisfaction of seeing my work used and appreciated by others is what makes it all worth it.",
-        // "Energized by the challenge of building dynamic and user-friendly websites and applications, I constantly strive to enhance my skills and bring my ideas to fruition. The joy of witnessing others utilize and appreciate my work is what fuels my passion.",
-        // "Eager to constantly enhance my skills, my primary experience has been in frontend development. Specifically, I have been honing my expertise in React and creating aesthetically pleasing applications. While my current focus is on frontend, I am also excited about exploring opportunities to broaden my knowledge to include backend development.",
         "Engaging with programming for the past two years has been an immensely enjoyable experience for me. It has quickly become one of my favorite hobbies and I am always enthusiastic about exploring new ways to expand my knowledge and skills in this exciting field.",
     },
   ];

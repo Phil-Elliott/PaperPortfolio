@@ -10,15 +10,16 @@ const FrontPage = () => {
     >
       <div className="lg:border-r-2 border-Border lg:pr-8 col-span-2 ">
         <h1 className="article-header lg:text-5xl text-fluid-9xl leading-normal lg:leading-normal">
-          Aspiring Frontend Developer Seeking First Dev Role
+          Self-Taught Developer Ready to Shape the Digital World!
         </h1>
         <p className="article-text lg:text-justify">
-          Hello! I'm a full stack developer with expertise in HTML, CSS,
-          JavaScript, and React. I create visually appealing and user-friendly
-          websites and continuously strive to improve my skills with the latest
-          technologies. I'm eager to join a dev team as a developer and
-          contribute to exciting projects. Check out my portfolio for examples
-          of my work, and feel free to contact me with any questions.
+          Crafting web applications from scratch and watching them come alive is
+          what got me hooked on web development. My self-taught journey has been
+          a blend of challenges, learning, and genuine passion. Each project
+          below isn't just code, but a step in my developmental journey. As I
+          eagerly anticipate my first professional role, I invite you to delve
+          into my projects below. Should you sense a potential collaboration,
+          I'm eager to chat!
         </p>
       </div>
       <div className="hidden lg:inline relative border-0 border-Border col-span-2 grayscale mix-blend-multiply">
@@ -47,7 +48,14 @@ export default FrontPage;
 
 
 
-
+<p className="article-text lg:text-justify">
+          Hello! I'm a full stack developer with expertise in HTML, CSS,
+          JavaScript, and React. I create visually appealing and user-friendly
+          websites and continuously strive to improve my skills with the latest
+          technologies. I'm eager to join a team as a developer and contribute
+          to exciting projects. Check out some of my projects below for examples
+          of my work, and feel free to contact me with any questions.
+        </p> 
 
 
 
