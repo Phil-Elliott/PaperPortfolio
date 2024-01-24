@@ -27,6 +27,7 @@ const Project = ({
     <div className={` border-Secondary  ${border}`}>
       <div className="hidden lg3:flex flex-wrap">
         {title.map((word, index) => {
+          console.log(title);
           return (
             <h1
               key={index}
@@ -38,10 +39,16 @@ const Project = ({
         })}
       </div>
       <p className="article-text mt-6">{description}</p>
-      {(title[0] === "Ecommerce" || title[0] === "Project") && (
+      {title[0] === "Simple" && (
         <p className="mt-6 text-xl leading-loose">
           <strong>Demo Account </strong>/ Email: user@gmail.com / Password:
           user1234
+        </p>
+      )}
+      {title[0] === "Retro" && (
+        <p className="mt-6 text-xl leading-loose">
+          <strong>Demo Account </strong>/ Email: user@gmail.com / Password:
+          user@123
         </p>
       )}
       <div className="md:grid grid-cols-3 mt-5 lg3:mt-10 font-semibold">
